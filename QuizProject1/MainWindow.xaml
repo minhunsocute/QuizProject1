@@ -21,14 +21,14 @@
         <!--//TExt Block option style templete-->
         <Style x:Key="textBlock_style1" TargetType="{x:Type TextBlock}">
             <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontFamily" Value="Nirmala UI Semilight"/>
+            <Setter Property="FontFamily" Value="Segoe UI Black"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
         <!--//ToolTip style templete //-->
         <Style x:Key="toolTip_style" TargetType="{x:Type ToolTip}">
-            <Setter Property="Background" Value="#FF65A5DA"/>
+            <Setter Property="Background" Value="#FF6D79BB"/>
             <Setter Property="Placement" Value="Right"/>
             <Setter Property="Margin" Value="0,0,0,0"/>
             <Setter Property="FontSize" Value="16"/>
@@ -72,192 +72,409 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!--//Style Button1//-->
+        <ImageBrush x:Key="tb_Teacher_over"
+                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\teacherOver.png"/>
+        <ImageBrush x:Key="tb_Student_over"
+                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\student.png"/>
+        <ImageBrush x:Key="tb_admin_over"
+                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\administrator (1).png"/>
+        <ImageBrush x:Key="tb_shutdown_over"
+                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\power.png"/>
+        <Style x:Key="btn_style" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Teacher_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Teacher_over}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Teacher_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Teacher_over}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btn_style1" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Student_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Student_over}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Student_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_Student_over}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btn_style2" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_admin_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_admin_over}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_admin_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_admin_over}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btn_style3" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_shutdown_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_shutdown_over}"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-
             <ColumnDefinition Width="750"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+
         <!--//Menu//-->
-        <Grid x:Name="nav_lb"
-              HorizontalAlignment="Left"
-              Width="60"
-              Background="#FF3580BF"
-              Grid.RowSpan="2">
-            <StackPanel x:Name="st_pnl">
-                <StackPanel Width="230" Orientation="Horizontal" Height="70">
-                    <Ellipse Height="45" Width ="50" Stroke="White" Margin="4 10" >
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
-                                Stretch="Fill"/>
-                        </Ellipse.Fill>
+        <Grid Grid.Column="0">
+            
+            <!--//User Control//-->
+            <Button Content="Button" HorizontalAlignment="Left" Margin="75,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.252,0.752"/>
 
-                    </Ellipse>
-                    <Button Height="23" Width="25" Margin="-1,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
-                        <materialDesign:PackIcon Kind="Facebook" Width="25" Height="23" Foreground="White"/>
-                    </Button>
-                    <Button Height="23" Width="25" Margin="-10,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
-                        <materialDesign:PackIcon Kind="Github" Width="25" Height="23" Foreground="White"/>
-                    </Button>
-                    <Button Height="23" Width="25" Margin="-10,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
-                        <materialDesign:PackIcon Kind="Instagram" Width="25" Height="23" Foreground="White"/>
-                    </Button>
-                </StackPanel>
-                <Grid Height="75" Margin="0 10">
-                    <TextBlock Grid.Row="1"
-                               Grid.Column="0"
-                               VerticalAlignment="Center"
-                               Margin="70,-10,0,0"
-                               Text="M E N U"
-                               Style="{StaticResource textBlock_style1}">
+            
+            
+            <Grid x:Name="nav_lb"
+                  HorizontalAlignment="Left"
+                  Width="60"
+                  Background="#FF5261BB"
+                  ShowGridLines="True"
+                  >
+                
+                <StackPanel x:Name="st_pnl">
+                    <StackPanel Width="230" Orientation="Horizontal" Height="70">
+                        <Ellipse Height="45" Width ="50" Stroke="White" Margin="4 10" >
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
+                                    Stretch="Fill"/>
+                            </Ellipse.Fill>
+
+                        </Ellipse>
+                        <Button Height="23" Width="25" Margin="-1,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                            <materialDesign:PackIcon Kind="Facebook" Width="25" Height="23" Foreground="White"/>
+                        </Button>
+                        <Button Height="23" Width="25" Margin="-10,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                            <materialDesign:PackIcon Kind="Github" Width="25" Height="23" Foreground="White"/>
+                        </Button>
+                        <Button Height="23" Width="25" Margin="-10,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                            <materialDesign:PackIcon Kind="Instagram" Width="25" Height="23" Foreground="White"/>
+                        </Button>
+                    </StackPanel>
+                    <Grid Height="75" Margin="0 10">
+                        <TextBlock Grid.Row="1"
+                                   Grid.Column="0"
+                                   VerticalAlignment="Center"
+                                   Margin="70,-10,0,0"
+                                   Text="M E N U"
+                                   Style="{StaticResource textBlock_style1}">
                             
-                            <!--//Shadow effect-->
-                        <TextBlock.Effect>
-                            <DropShadowEffect BlurRadius="10"
-                                              ShadowDepth="1"
-                                              Direction="-90"
-                                              Color="White" >
+                                <!--//Shadow effect-->
+                            <TextBlock.Effect>
+                                <DropShadowEffect BlurRadius="10"
+                                                  ShadowDepth="1"
+                                                  Direction="-90"
+                                                  Color="White" >
 
-                            </DropShadowEffect>
-                        </TextBlock.Effect>
-                    </TextBlock>
-                    <ToggleButton x:Name="tg_btn"
-                                  HorizontalAlignment="Left"
-                                  Margin="12,17,0,28"
-                                  Width="30"
-                                  BorderThickness="0"
-                                  Style="{StaticResource tb_style}">
-                        <ToggleButton.Background>
-                            <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\menu.png"/>
-                        </ToggleButton.Background>
-                        <ToggleButton.Triggers>
-                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                                <BeginStoryboard>
-                                    <Storyboard x:Name="HideSatackPanel">
-                                        <DoubleAnimation
-                                                        Storyboard.TargetName="nav_lb"
-                                                        Storyboard.TargetProperty="Width"
-                                                        BeginTime="0:0:0"
-                                                        From="180" To="60"
-                                                        Duration="0:0:0.2">
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="ToggleButton.Checked">
-                                <BeginStoryboard>
-                                    <Storyboard x:Name="ShowSatackPanel">
-                                        <DoubleAnimation
-                                                        Storyboard.TargetName="nav_lb"
-                                                        Storyboard.TargetProperty="Width"
-                                                        BeginTime="0:0:0"
-                                                        From="60" To="180"
-                                                        Duration="0:0:0.2">
-                                        </DoubleAnimation>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </EventTrigger>
-                        </ToggleButton.Triggers>
-                    </ToggleButton>
-                </Grid>
-                <!--Danh sách các chức năng-->
-                <ListView x:Name="LV"
-                              Background="Transparent"
-                              BorderBrush="Transparent"
-                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,-120,-1,-378" Height="292" SelectedIndex="-1">
-                    <!--//Teacher//-->
-                    <ListViewItem Margin="0 0 0 15" >
-                        <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\teacher.png" Width="40"/>
-                            <TextBlock Text="Teacher"
-                                           Margin="20,10,0,0"
-                                           FontSize="19"
-                                           Style="{StaticResource textBlock_style1}">
-                            </TextBlock>
-                        </StackPanel>
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tl_teacher" Content="Teacher"
-                                         Style="{StaticResource toolTip_style}"/>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
+                                </DropShadowEffect>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                        <ToggleButton x:Name="tg_btn"
+                                      HorizontalAlignment="Left"
+                                      Margin="12,17,0,28"
+                                      Width="30"
+                                      BorderThickness="0"
+                                      Style="{StaticResource tb_style}" 
+                                      Checked="tg_btn_Checked" Unchecked="tg_btn_Unchecked">
+                            <ToggleButton.Background>
+                                <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\menu.png"/>
+                            </ToggleButton.Background>
+                            <ToggleButton.Triggers>
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                    <BeginStoryboard>
+                                        <Storyboard x:Name="HideSatackPanel">
+                                            <DoubleAnimation
+                                                            Storyboard.TargetName="nav_lb"
+                                                            Storyboard.TargetProperty="Width"
+                                                            BeginTime="0:0:0"
+                                                            From="180" To="60"
+                                                            Duration="0:0:0.2">
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                    <BeginStoryboard>
+                                        <Storyboard x:Name="ShowSatackPanel">
+                                            <DoubleAnimation
+                                                            Storyboard.TargetName="nav_lb"
+                                                            Storyboard.TargetProperty="Width"
+                                                            BeginTime="0:0:0"
+                                                            From="60" To="180"
+                                                            Duration="0:0:0.2">
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </ToggleButton.Triggers>
+                        </ToggleButton>
+                    </Grid>
+                    <!--Danh sách các chức năng-->
+                    <ListView x:Name="LV"
+                                  Background="Transparent"
+                                  BorderBrush="Transparent"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,-120,-1,-378" Height="272" SelectedIndex="-1">
+                        <!--//Teacher//-->
+                        <ListViewItem Margin="0 0 0 15" MouseEnter="ListViewItem_MouseEnter" >
+                            <StackPanel Orientation="Horizontal"
+                                            Width="230">
+                                <ToggleButton x:Name="btnTeaCher" Width="40" Height="40" 
+                                        BorderBrush="{x:Null}"
+                                        BorderThickness="0"
+                                        Style="{StaticResource btn_style}" Checked="btnTeaCher_Checked" Unchecked="btnTeaCher_Unchecked">
+                                    <ToggleButton.Background>
+                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\teacher.png"/>
+                                    </ToggleButton.Background>
+                                    
+                                </ToggleButton>
+                                <!--<Image Source="D:\project\QuizProject1\QuizProject1\Imag\teacher.png" Width="40"/>-->
+                                <TextBlock     x:Name="teacherText"
+                                               Text="Teacher"
+                                               Margin="20,10,0,0"
+                                               FontSize="19"
+                                               Style="{StaticResource textBlock_style1}">
+                                </TextBlock>
+                            </StackPanel>
+                            <ListViewItem.ToolTip>
+                                <ToolTip x:Name="tl_teacher" Content="Teacher"
+                                             Style="{StaticResource toolTip_style}"/>
+                            </ListViewItem.ToolTip>
+                        </ListViewItem>
 
-                    <!--//Student//-->
-                    <ListViewItem Margin="0 0 0 15" >
-                        <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\student-with-graduation-cap.png" Width="38"/>
-                            <TextBlock Text="Student"
-                                           Margin="20,10,0,0"
-                                           FontSize="19"
-                                           Style="{StaticResource textBlock_style1}">
-                            </TextBlock>
-                        </StackPanel>
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tl_student" Content="Student"
-                                         Style="{StaticResource toolTip_style}"/>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
+                        <!--//Student//-->
+                        <ListViewItem Margin="0 0 0 15" >
+                            <StackPanel Orientation="Horizontal"
+                                            Width="230">
+                                <ToggleButton x:Name="btnStudent" Width="35" Height="35" Margin="3"
+                                        BorderBrush="{x:Null}" 
+                                        HorizontalAlignment="Left"
+                                        BorderThickness="0"
+                                        Style="{StaticResource btn_style1}" Checked="btnStudent_Checked" Unchecked="btnStudent_Unchecked">
+                                    <ToggleButton.Background>
+                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\student-with-graduation-cap.png"/>
+                                    </ToggleButton.Background>
+                                </ToggleButton>
+                                <TextBlock Text="Student" x:Name="studenttext"
+                                               Margin="20,10,0,0"
+                                               FontSize="19"
+                                               Style="{StaticResource textBlock_style1}">
+                                </TextBlock>
+                            </StackPanel>
+                            <ListViewItem.ToolTip>
+                                <ToolTip x:Name="tl_student" Content="Student"
+                                             Style="{StaticResource toolTip_style}"/>
+                            </ListViewItem.ToolTip>
+                        </ListViewItem>
 
-                    <!--//Admin//-->
-                    <ListViewItem Margin="0 0 0 15" >
-                        <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\administrator.png" Width="38"/>
-                            <TextBlock Text="Admin"
-                                           Margin="20,10,0,0"
-                                           FontSize="19"
-                                           Style="{StaticResource textBlock_style1}">
-                            </TextBlock>
-                        </StackPanel>
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="t_admin" Content="Admin"
-                                         Style="{StaticResource toolTip_style}"/>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
-                    <!--//Shut down//-->
-                    <ListViewItem x:Name="ShutDownListView"
-                                  Margin="0 0 0 15" PreviewMouseDoubleClick="ShutDownListView_PreviewMouseDoubleClick" >
-                        <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\power-on-semicircle-.png" Width="38"/>
-                            <TextBlock Text="Shut Down"
-                                           Margin="20,8,0,0"
-                                           FontSize="19"
-                                           Style="{StaticResource textBlock_style1}">
-                            </TextBlock>
-                        </StackPanel>
-                        <ListViewItem.ToolTip>
-                            <ToolTip x:Name="t_shutdown" Content="Shut Down"
-                                         Style="{StaticResource toolTip_style}"/>
-                        </ListViewItem.ToolTip>
-                    </ListViewItem>
-                </ListView>
-            </StackPanel>
-            <Grid VerticalAlignment="Top" Height="55" Margin="0,545,0,0">
-                <StackPanel Margin="0,8,-170,5" Orientation="Horizontal">
-                    <Button Height="52" Width="62" Margin="0,-20" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
-                        <materialDesign:PackIcon Kind="Youtube" Width="60" Height="50" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Button>
-                    <TextBlock Text="HHProject" 
-                               Height="30" Width="93"
-                               Style="{StaticResource textBlock_style1}"
-                               />
+                        <!--//Admin//-->
+                        <ListViewItem Margin="0 0 0 15" >
+                            <StackPanel Orientation="Horizontal"
+                                            Width="230">
+                                <ToggleButton x:Name="btnAdmin" Width="35" Height="35" Margin="3"
+                                        BorderBrush="{x:Null}" 
+                                        HorizontalAlignment="Left"
+                                        BorderThickness="0"
+                                        Style="{StaticResource btn_style2}" Unchecked="btnAdmin_Unchecked" Checked="btnAdmin_Checked">
+                                    <ToggleButton.Background>
+                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\administrator.png"/>
+                                    </ToggleButton.Background>
+                                </ToggleButton>
+                                <TextBlock     Text="Admin" x:Name="admintext"
+                                               Margin="20,10,0,0"
+                                               FontSize="19"
+                                               Style="{StaticResource textBlock_style1}">
+                                </TextBlock>
+                            </StackPanel>
+                            <ListViewItem.ToolTip>
+                                <ToolTip x:Name="tl_admin" Content="Admin"
+                                             Style="{StaticResource toolTip_style}"/>
+                            </ListViewItem.ToolTip>
+                        </ListViewItem>
+                        <!--//Shut down//-->
+                        <ListViewItem x:Name="ShutDownListView"
+                                      Margin="0 0 0 15" >
+                            <StackPanel Orientation="Horizontal"
+                                            Width="230">
+                                <ToggleButton x:Name="btnShutDown" Width="35" Height="35" Margin="3"
+                                        BorderBrush="{x:Null}" 
+                                        HorizontalAlignment="Left"
+                                        BorderThickness="0"
+                                        Style="{StaticResource btn_style3}" Click="btnShutDown_Click">
+                                    <ToggleButton.Background>
+                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\power-on-semicircle-.png"/>
+                                    </ToggleButton.Background>
+                                </ToggleButton>
+                                <TextBlock Text="Shut Down"
+                                               Margin="20,8,0,0"
+                                               FontSize="19"
+                                               Style="{StaticResource textBlock_style1}">
+                                </TextBlock>
+                            </StackPanel>
+                            <ListViewItem.ToolTip>
+                                <ToolTip x:Name="tl_shutdown" Content="Shut Down"
+                                             Style="{StaticResource toolTip_style}"/>
+                            </ListViewItem.ToolTip>
+                        </ListViewItem>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                            <Border x:Name="Bd"
+                                                    Height="50"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                  VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                                            </Border>
+
+                                            <ControlTemplate.Triggers>
+                                                <MultiTrigger>
+                                                    <MultiTrigger.Conditions>
+                                                        <Condition Property="IsMouseOver" Value="True"/>
+                                                    </MultiTrigger.Conditions>
+
+                                                    <Setter Property="Background" 
+                                                            TargetName="Bd"
+                                                            Value="#FF6E7BC5"/>
+                                                </MultiTrigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
                 </StackPanel>
+                <Grid VerticalAlignment="Top" Height="55" Margin="0,520,0,0">
+                    <StackPanel Margin="0,6,-170,7" Orientation="Horizontal">
+                        <Button Height="52" Width="62" Margin="0,-20" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                            <materialDesign:PackIcon x:Name="btnYTB" 
+                                                     Kind="Youtube" Width="62" Height="52" Foreground="White" 
+                                                     HorizontalAlignment="Center" MouseEnter="PackIcon_MouseEnter_1"/>
+                        </Button>
+                        <TextBlock Text="HHProject" 
+                                   Height="30" Width="93"
+                                   Style="{StaticResource textBlock_style1}"
+                                   />
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
-
         <Grid x:Name="nav_info"
-              Grid.Column="1"
+              Grid.Column="2"
               Margin="0,30,0,0"
-              Background="#FF3580BF"
+              Background="#FF5261BB"
               HorizontalAlignment="Right">
             <Image Source="D:\project\QuizProject1\QuizProject1\Imag\exam.jpg"
                    Stretch="Fill" Height="154" VerticalAlignment="Top"/>
 
-            <Ellipse Height="100" Width ="100" Margin="0,110,66,    0" VerticalAlignment="Top"
+            <Ellipse Height="100" Width ="100" Margin="0,110,72,0" VerticalAlignment="Top"
                      HorizontalAlignment="Right" Stroke="White">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
@@ -272,7 +489,7 @@
                        Style="{StaticResource textBlock_style}" FontWeight="Normal" FontFamily="Segoe UI"
                        VerticalAlignment="Top"/>
             <TextBlock Text="QUIZ APP
-                       " Margin="78,226,52,0"
+                       " Margin="66,222,64,0"
                 Foreground="White"
                 Style="{StaticResource textBlock_style}" FontWeight="Normal" FontFamily="Segoe UI Black"
                 VerticalAlignment="Top" FontSize="24">
@@ -286,12 +503,53 @@
                 </TextBlock.Effect>
             </TextBlock>
 
+            <Grid HorizontalAlignment="Center" Width="233" Margin="0,268,0,72">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Grid.Column="0"  
+                       Source="D:\project\QuizProject1\QuizProject1\Imag\shutterstock_1664708983.jpg"
+                       >
+                    <Image.Effect>
+                        <!--<DropShadowBitmapEffect Color="Black" Direction="200" ShadowDepth="10" Softness=".9"/-->
+                        <DropShadowEffect Color="Black" Direction="200" ShadowDepth="4" />
+                    </Image.Effect>
+                </Image>
+
+                <Image Grid.Row="1" Grid.Column="1"  
+                       Source="D:\project\QuizProject1\QuizProject1\Imag\exampic.jpg"
+                       >
+                    <Image.Effect>
+                        <!--<DropShadowBitmapEffect Color="Black" Direction="200" ShadowDepth="10" Softness=".9"/-->
+                        <DropShadowEffect Color="Black" Direction="200" ShadowDepth="4" />
+                    </Image.Effect>
+                </Image>
+                <TextBlock Grid.Column="1" Grid.Row="0" Margin="5,10,4,10" Style="{StaticResource textBlock_style1}" FontSize="12">
+                     Member 1: <LineBreak/>
+                    Nguyen Minh Hung <LineBreak/>
+                    20120491 <LineBreak/>
+                    HCMUS
+                </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Margin="0,10,4,10" Style="{StaticResource textBlock_style1}" FontSize="12">
+                     Member 2: <LineBreak/>
+                    MaiPham Quoc Hung <LineBreak/>
+                    20120491 <LineBreak/>
+                    UIT
+                </TextBlock>
+
+            </Grid>
+
         </Grid>
         <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
                         Width="100"
-                        Height="30" Grid.Column="1" Margin="190,0,0,0">
+                        Height="30" Grid.Column="2" Margin="190,1,0,0">
             <Button x:Name="btnSettings" Width="30" Height="30" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
                 <materialDesign:PackIcon Kind="Settings" Width="25" Height="25" Foreground="#FF3580BF"/>
             </Button>
