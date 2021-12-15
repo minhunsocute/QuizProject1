@@ -18,7 +18,32 @@
             <Setter Property="FontFamily" Value="Nirmala UI Semilight"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
-        <!--//Toggle Button style templete-->
+        <!--//TExt Block option style templete-->
+        <Style x:Key="textBlock_style1" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Nirmala UI Semilight"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!--//ToolTip style templete //-->
+        <Style x:Key="toolTip_style" TargetType="{x:Type ToolTip}">
+            <Setter Property="Background" Value="#FF65A5DA"/>
+            <Setter Property="Placement" Value="Right"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="FontFamily" Value="Fonts/Roboto-light.tff #Roboto"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="HorizontalOffset" Value="9"/>
+            <Setter Property="VerticalOffset" Value="6"/>
+            <Setter Property="HasDropShadow" Value="True"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <!--//Toggle Button style templete//-->
+
         <ImageBrush x:Key="tb_mouse_over"
                     ImageSource="D:\project\QuizProject1\QuizProject1\Imag\menu1.png"/>
         <Style x:Key="tb_style" TargetType="{x:Type ToggleButton}">
@@ -42,15 +67,6 @@
                                         Value="{StaticResource tb_mouse_over}"/>
 
                             </Trigger>
-
-                            <Trigger Property="IsChecked" Value="True">
-                                <Setter Property="Background"
-                                        TargetName="border"
-                                        Value="{StaticResource tb_mouse_over}"/>
-                                <Setter Property="BorderBrush"
-                                        TargetName="border"
-                                        Value="{StaticResource tb_mouse_over}"/>
-                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -59,23 +75,57 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
+
             <ColumnDefinition Width="750"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--//Menu//-->
         <Grid x:Name="nav_lb"
               HorizontalAlignment="Left"
-              Width="65"
-              Background="#FF3580BF">
+              Width="60"
+              Background="#FF3580BF"
+              Grid.RowSpan="2">
             <StackPanel x:Name="st_pnl">
-                <Grid Height="75">
+                <StackPanel Width="230" Orientation="Horizontal" Height="70">
+                    <Ellipse Height="45" Width ="50" Stroke="White" Margin="4 10" >
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
+                                Stretch="Fill"/>
+                        </Ellipse.Fill>
+
+                    </Ellipse>
+                    <Button Height="23" Width="25" Margin="-1,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="Facebook" Width="25" Height="23" Foreground="White"/>
+                    </Button>
+                    <Button Height="23" Width="25" Margin="-10,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="Github" Width="25" Height="23" Foreground="White"/>
+                    </Button>
+                    <Button Height="23" Width="25" Margin="-10,20,10,0" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="Instagram" Width="25" Height="23" Foreground="White"/>
+                    </Button>
+                </StackPanel>
+                <Grid Height="75" Margin="0 10">
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="70,-10,0,0"
+                               Text="M E N U"
+                               Style="{StaticResource textBlock_style1}">
+                            
+                            <!--//Shadow effect-->
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="10"
+                                              ShadowDepth="1"
+                                              Direction="-90"
+                                              Color="White" >
+
+                            </DropShadowEffect>
+                        </TextBlock.Effect>
+                    </TextBlock>
                     <ToggleButton x:Name="tg_btn"
-                                  Grid.Column="0"
-                                  VerticalAlignment="Center"
                                   HorizontalAlignment="Left"
-                                  Margin="18 -20 0 0"
-                                  Height="30"
+                                  Margin="12,17,0,28"
                                   Width="30"
                                   BorderThickness="0"
                                   Style="{StaticResource tb_style}">
@@ -90,7 +140,7 @@
                                                         Storyboard.TargetName="nav_lb"
                                                         Storyboard.TargetProperty="Width"
                                                         BeginTime="0:0:0"
-                                                        From="230" To="65"
+                                                        From="180" To="60"
                                                         Duration="0:0:0.2">
                                         </DoubleAnimation>
                                     </Storyboard>
@@ -103,7 +153,7 @@
                                                         Storyboard.TargetName="nav_lb"
                                                         Storyboard.TargetProperty="Width"
                                                         BeginTime="0:0:0"
-                                                        From="65" To="230"
+                                                        From="60" To="180"
                                                         Duration="0:0:0.2">
                                         </DoubleAnimation>
                                     </Storyboard>
@@ -112,23 +162,110 @@
                         </ToggleButton.Triggers>
                     </ToggleButton>
                 </Grid>
+                <!--Danh sách các chức năng-->
+                <ListView x:Name="LV"
+                              Background="Transparent"
+                              BorderBrush="Transparent"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,-120,-1,-378" Height="292" SelectedIndex="-1">
+                    <!--//Teacher//-->
+                    <ListViewItem Margin="0 0 0 15" >
+                        <StackPanel Orientation="Horizontal"
+                                        Width="230">
+                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\teacher.png" Width="40"/>
+                            <TextBlock Text="Teacher"
+                                           Margin="20,10,0,0"
+                                           FontSize="19"
+                                           Style="{StaticResource textBlock_style1}">
+                            </TextBlock>
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip x:Name="tl_teacher" Content="Teacher"
+                                         Style="{StaticResource toolTip_style}"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <!--//Student//-->
+                    <ListViewItem Margin="0 0 0 15" >
+                        <StackPanel Orientation="Horizontal"
+                                        Width="230">
+                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\student-with-graduation-cap.png" Width="38"/>
+                            <TextBlock Text="Student"
+                                           Margin="20,10,0,0"
+                                           FontSize="19"
+                                           Style="{StaticResource textBlock_style1}">
+                            </TextBlock>
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip x:Name="tl_student" Content="Student"
+                                         Style="{StaticResource toolTip_style}"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <!--//Admin//-->
+                    <ListViewItem Margin="0 0 0 15" >
+                        <StackPanel Orientation="Horizontal"
+                                        Width="230">
+                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\administrator.png" Width="38"/>
+                            <TextBlock Text="Admin"
+                                           Margin="20,10,0,0"
+                                           FontSize="19"
+                                           Style="{StaticResource textBlock_style1}">
+                            </TextBlock>
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip x:Name="t_admin" Content="Admin"
+                                         Style="{StaticResource toolTip_style}"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+                    <!--//Shut down//-->
+                    <ListViewItem x:Name="ShutDownListView"
+                                  Margin="0 0 0 15" PreviewMouseDoubleClick="ShutDownListView_PreviewMouseDoubleClick" >
+                        <StackPanel Orientation="Horizontal"
+                                        Width="230">
+                            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\power-on-semicircle-.png" Width="38"/>
+                            <TextBlock Text="Shut Down"
+                                           Margin="20,8,0,0"
+                                           FontSize="19"
+                                           Style="{StaticResource textBlock_style1}">
+                            </TextBlock>
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip x:Name="t_shutdown" Content="Shut Down"
+                                         Style="{StaticResource toolTip_style}"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+                </ListView>
             </StackPanel>
+            <Grid VerticalAlignment="Top" Height="55" Margin="0,545,0,0">
+                <StackPanel Margin="0,8,-170,5" Orientation="Horizontal">
+                    <Button Height="52" Width="62" Margin="0,-20" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
+                        <materialDesign:PackIcon Kind="Youtube" Width="60" Height="50" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                    <TextBlock Text="HHProject" 
+                               Height="30" Width="93"
+                               Style="{StaticResource textBlock_style1}"
+                               />
+                </StackPanel>
+            </Grid>
         </Grid>
-        <Grid>
-            <Grid VerticalAlignment="Top"
-                  Height="30"></Grid>
-        </Grid>
-        <Grid Grid.Column="1"
+
+        <Grid x:Name="nav_info"
+              Grid.Column="1"
               Margin="0,30,0,0"
-              Background="#FF3580BF">
+              Background="#FF3580BF"
+              HorizontalAlignment="Right">
             <Image Source="D:\project\QuizProject1\QuizProject1\Imag\exam.jpg"
                    Stretch="Fill" Height="154" VerticalAlignment="Top"/>
 
-            <Ellipse Height="100" Width ="100" Margin="0,110,66,0" VerticalAlignment="Top"
+            <Ellipse Height="100" Width ="100" Margin="0,110,66,    0" VerticalAlignment="Top"
                      HorizontalAlignment="Right" Stroke="White">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"/>
+                    <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
+                                Stretch="Fill"/>
                 </Ellipse.Fill>
+                <Ellipse.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="200" ShadowDepth="10" Softness=".9"/>
+                </Ellipse.BitmapEffect>
             </Ellipse>
             <TextBlock Text="HungHung" Margin="82,536,48,0"
                        Foreground="White"
@@ -138,7 +275,16 @@
                        " Margin="78,226,52,0"
                 Foreground="White"
                 Style="{StaticResource textBlock_style}" FontWeight="Normal" FontFamily="Segoe UI Black"
-                VerticalAlignment="Top" FontSize="24"/>
+                VerticalAlignment="Top" FontSize="24">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+                              ShadowDepth="4"
+                              Direction="200"
+                              Color="Black"
+                              Opacity="0.5"
+                              BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
 
         </Grid>
         <StackPanel Orientation="Horizontal"
@@ -153,5 +299,6 @@
                 <materialDesign:PackIcon Kind="Power" Width="25" Height="25" Foreground="#FF3580BF" HorizontalAlignment="Center"/>
             </Button>
         </StackPanel>
+
     </Grid>
 </Window>

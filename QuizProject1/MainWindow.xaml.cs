@@ -30,6 +30,16 @@ namespace QuizProject1
             //System.Windows.Application.Current.Shutdown();
         }
 
+        private void ListViewItem_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void ShutDownListView_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
         private void btnPower_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
