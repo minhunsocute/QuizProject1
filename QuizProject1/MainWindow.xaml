@@ -180,7 +180,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style x:Key="btn_style3" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -241,19 +241,13 @@
 
         <!--//Menu//-->
         <Grid Grid.Column="0">
-            
-            <!--//User Control//-->
-            <Button Content="Button" HorizontalAlignment="Left" Margin="75,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.252,0.752"/>
-
-            
-            
             <Grid x:Name="nav_lb"
                   HorizontalAlignment="Left"
                   Width="60"
                   Background="#FF5261BB"
                   ShowGridLines="True"
                   >
-                
+
                 <StackPanel x:Name="st_pnl">
                     <StackPanel Width="230" Orientation="Horizontal" Height="70">
                         <Ellipse Height="45" Width ="50" Stroke="White" Margin="4 10" >
@@ -347,7 +341,7 @@
                                     <ToggleButton.Background>
                                         <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\teacher.png"/>
                                     </ToggleButton.Background>
-                                    
+
                                 </ToggleButton>
                                 <!--<Image Source="D:\project\QuizProject1\QuizProject1\Imag\teacher.png" Width="40"/>-->
                                 <TextBlock     x:Name="teacherText"
@@ -474,22 +468,22 @@
                         </ListView.ItemContainerStyle>
                     </ListView>
                 </StackPanel>
-                
+
                 <Grid VerticalAlignment="Top" Height="55" Margin="0,520,0,0">
                     <StackPanel Margin="0,6,-170,7" Orientation="Horizontal">
-                        <ToggleButton Height="52" Width="62" Margin="0,-20"  
+                        <ToggleButton Height="52" Width="62" Margin="-2,-20"  
                                       BorderBrush="{x:Null}" Background="Transparent"
-                                      Style="{StaticResource btn_style4}" 
+                                      
                                       BorderThickness="0">
                             <materialDesign:PackIcon Kind="Youtube" Width="60" 
                                                      Height="50" Foreground="White"/>
                         </ToggleButton>
                         <TextBlock Text="HHProject" 
-                                   Height="30" Width="93"
+                                   Height="30" Width="112" Margin="4"
                                    Style="{StaticResource textBlock_style1}"
                                    />
                     </StackPanel>
-                
+
                 </Grid>
             </Grid>
         </Grid>
