@@ -20,8 +20,8 @@
         </Style>
         <!--//TExt Block option style templete-->
         <Style x:Key="textBlock_style1" TargetType="{x:Type TextBlock}">
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontFamily" Value="Segoe UI Black"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="Nirmala UI Semilight"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
@@ -180,6 +180,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
         <Style x:Key="btn_style3" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -206,8 +207,30 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="btn_style4" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+                        </Border>
 
-
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_shutdown_over}"/>
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_shutdown_over}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -451,18 +474,22 @@
                         </ListView.ItemContainerStyle>
                     </ListView>
                 </StackPanel>
+                
                 <Grid VerticalAlignment="Top" Height="55" Margin="0,520,0,0">
                     <StackPanel Margin="0,6,-170,7" Orientation="Horizontal">
-                        <Button Height="52" Width="62" Margin="0,-20" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
-                            <materialDesign:PackIcon x:Name="btnYTB" 
-                                                     Kind="Youtube" Width="62" Height="52" Foreground="White" 
-                                                     HorizontalAlignment="Center" MouseEnter="PackIcon_MouseEnter_1"/>
-                        </Button>
+                        <ToggleButton Height="52" Width="62" Margin="0,-20"  
+                                      BorderBrush="{x:Null}" Background="Transparent"
+                                      Style="{StaticResource btn_style4}" 
+                                      BorderThickness="0">
+                            <materialDesign:PackIcon Kind="Youtube" Width="60" 
+                                                     Height="50" Foreground="White"/>
+                        </ToggleButton>
                         <TextBlock Text="HHProject" 
                                    Height="30" Width="93"
                                    Style="{StaticResource textBlock_style1}"
                                    />
                     </StackPanel>
+                
                 </Grid>
             </Grid>
         </Grid>
@@ -529,7 +556,8 @@
                         <DropShadowEffect Color="Black" Direction="200" ShadowDepth="4" />
                     </Image.Effect>
                 </Image>
-                <TextBlock Grid.Column="1" Grid.Row="0" Margin="5,10,4,10" Style="{StaticResource textBlock_style1}" FontSize="12">
+                <TextBlock Grid.Column="1" Grid.Row="0" Margin="5,10,4,10"
+                           Style="{StaticResource textBlock_style1}" FontSize="12">
                      Member 1: <LineBreak/>
                     Nguyen Minh Hung <LineBreak/>
                     20120491 <LineBreak/>

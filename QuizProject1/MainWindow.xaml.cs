@@ -37,11 +37,7 @@ namespace QuizProject1
             System.Windows.Application.Current.Shutdown();
         }
 
-        private void PackIcon_MouseEnter_1(object sender, MouseEventArgs e)
-        {
-            btnYTB.Background = Brushes.Transparent;
-            btnYTB.Foreground = Brushes.Black;
-        }
+        
        
         private void btnTeaCher_MouseEnter(object sender, MouseEventArgs e)
         {
