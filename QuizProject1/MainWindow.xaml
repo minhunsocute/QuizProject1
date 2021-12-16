@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="600" 
-        Width="1000"
+        Width="1094"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
@@ -234,20 +234,28 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="850"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
         <!--//Menu//-->
-        <Grid Grid.Column="0">
+        <Grid   x:Name="man_Grid"
+                Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" x:Name="main_form" Background="#FFECDBDB" Margin="0,30,0,0">
+
+            </Grid>
             <Grid x:Name="nav_lb"
                   HorizontalAlignment="Left"
-                  Width="60"
+                  Width="180"
                   Background="#FF5261BB"
                   ShowGridLines="True"
+                  Grid.Column="0"
                   >
-
+               
                 <StackPanel x:Name="st_pnl">
                     <StackPanel Width="230" Orientation="Horizontal" Height="70">
                         <Ellipse Height="45" Width ="50" Stroke="White" Margin="4 10" >
@@ -276,18 +284,10 @@
                                    Style="{StaticResource textBlock_style1}">
                             
                                 <!--//Shadow effect-->
-                            <TextBlock.Effect>
-                                <DropShadowEffect BlurRadius="10"
-                                                  ShadowDepth="1"
-                                                  Direction="-90"
-                                                  Color="White" >
-
-                                </DropShadowEffect>
-                            </TextBlock.Effect>
                         </TextBlock>
                         <ToggleButton x:Name="tg_btn"
                                       HorizontalAlignment="Left"
-                                      Margin="12,17,0,28"
+                                      Margin="23,17,0,28"
                                       Width="30"
                                       BorderThickness="0"
                                       Style="{StaticResource tb_style}" 
@@ -295,145 +295,20 @@
                             <ToggleButton.Background>
                                 <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\menu.png"/>
                             </ToggleButton.Background>
-                            <ToggleButton.Triggers>
-                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="HideSatackPanel">
-                                            <DoubleAnimation
-                                                            Storyboard.TargetName="nav_lb"
-                                                            Storyboard.TargetProperty="Width"
-                                                            BeginTime="0:0:0"
-                                                            From="180" To="60"
-                                                            Duration="0:0:0.2">
-                                            </DoubleAnimation>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                                <EventTrigger RoutedEvent="ToggleButton.Checked">
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="ShowSatackPanel">
-                                            <DoubleAnimation
-                                                            Storyboard.TargetName="nav_lb"
-                                                            Storyboard.TargetProperty="Width"
-                                                            BeginTime="0:0:0"
-                                                            From="60" To="180"
-                                                            Duration="0:0:0.2">
-                                            </DoubleAnimation>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                            </ToggleButton.Triggers>
+                           
                         </ToggleButton>
                     </Grid>
-                    <!--Danh sách các chức năng-->
+                   
+
                     <ListView x:Name="LV"
-                                  Background="Transparent"
-                                  BorderBrush="Transparent"
-                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,-120,-1,-378" Height="272" SelectedIndex="-1">
-                        <!--//Teacher//-->
-                        <ListViewItem Margin="0 0 0 15" MouseEnter="ListViewItem_MouseEnter" >
-                            <StackPanel Orientation="Horizontal"
-                                            Width="230">
-                                <ToggleButton x:Name="btnTeaCher" Width="40" Height="40" 
-                                        BorderBrush="{x:Null}"
-                                        BorderThickness="0"
-                                        Style="{StaticResource btn_style}" Checked="btnTeaCher_Checked" Unchecked="btnTeaCher_Unchecked">
-                                    <ToggleButton.Background>
-                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\teacher.png"/>
-                                    </ToggleButton.Background>
-
-                                </ToggleButton>
-                                <!--<Image Source="D:\project\QuizProject1\QuizProject1\Imag\teacher.png" Width="40"/>-->
-                                <TextBlock     x:Name="teacherText"
-                                               Text="Teacher"
-                                               Margin="20,10,0,0"
-                                               FontSize="19"
-                                               Style="{StaticResource textBlock_style1}">
-                                </TextBlock>
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tl_teacher" Content="Teacher"
-                                             Style="{StaticResource toolTip_style}"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
-
-                        <!--//Student//-->
-                        <ListViewItem Margin="0 0 0 15" >
-                            <StackPanel Orientation="Horizontal"
-                                            Width="230">
-                                <ToggleButton x:Name="btnStudent" Width="35" Height="35" Margin="3"
-                                        BorderBrush="{x:Null}" 
-                                        HorizontalAlignment="Left"
-                                        BorderThickness="0"
-                                        Style="{StaticResource btn_style1}" Checked="btnStudent_Checked" Unchecked="btnStudent_Unchecked">
-                                    <ToggleButton.Background>
-                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\student-with-graduation-cap.png"/>
-                                    </ToggleButton.Background>
-                                </ToggleButton>
-                                <TextBlock Text="Student" x:Name="studenttext"
-                                               Margin="20,10,0,0"
-                                               FontSize="19"
-                                               Style="{StaticResource textBlock_style1}">
-                                </TextBlock>
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tl_student" Content="Student"
-                                             Style="{StaticResource toolTip_style}"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
-
-                        <!--//Admin//-->
-                        <ListViewItem Margin="0 0 0 15" >
-                            <StackPanel Orientation="Horizontal"
-                                            Width="230">
-                                <ToggleButton x:Name="btnAdmin" Width="35" Height="35" Margin="3"
-                                        BorderBrush="{x:Null}" 
-                                        HorizontalAlignment="Left"
-                                        BorderThickness="0"
-                                        Style="{StaticResource btn_style2}" Unchecked="btnAdmin_Unchecked" Checked="btnAdmin_Checked">
-                                    <ToggleButton.Background>
-                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\administrator.png"/>
-                                    </ToggleButton.Background>
-                                </ToggleButton>
-                                <TextBlock     Text="Admin" x:Name="admintext"
-                                               Margin="20,10,0,0"
-                                               FontSize="19"
-                                               Style="{StaticResource textBlock_style1}">
-                                </TextBlock>
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tl_admin" Content="Admin"
-                                             Style="{StaticResource toolTip_style}"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
-                        <!--//Shut down//-->
-                        <ListViewItem x:Name="ShutDownListView"
-                                      Margin="0 0 0 15" >
-                            <StackPanel Orientation="Horizontal"
-                                            Width="230">
-                                <ToggleButton x:Name="btnShutDown" Width="35" Height="35" Margin="3"
-                                        BorderBrush="{x:Null}" 
-                                        HorizontalAlignment="Left"
-                                        BorderThickness="0"
-                                        Style="{StaticResource btn_style3}" Click="btnShutDown_Click">
-                                    <ToggleButton.Background>
-                                        <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\power-on-semicircle-.png"/>
-                                    </ToggleButton.Background>
-                                </ToggleButton>
-                                <TextBlock Text="Shut Down"
-                                               Margin="20,8,0,0"
-                                               FontSize="19"
-                                               Style="{StaticResource textBlock_style1}">
-                                </TextBlock>
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tl_shutdown" Content="Shut Down"
-                                             Style="{StaticResource toolTip_style}"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
+                              Background="Transparent"
+                              BorderBrush="Transparent"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="272" 
+                              SelectionChanged="LV_SelectionChanged"
+                              SelectedIndex="0">
 
                         <ListView.ItemContainerStyle>
-                            <Style TargetType="ListViewItem">
+                            <Style TargetType="{x:Type ListViewItem}">
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type ListViewItem}">
@@ -466,7 +341,46 @@
                                 </Setter>
                             </Style>
                         </ListView.ItemContainerStyle>
+                        <!--//Teacher//-->
+                        <ListViewItem Height="50" Width="168" x:Name="btn_teacher">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="161">
+                                <materialDesign:PackIcon Kind="Teacher" Width="38" Height="36" 
+                                                         VerticalAlignment="Center" Margin="9"
+                                                         Foreground="White"/>
+                                <TextBlock Text="Teacher" FontSize="22" VerticalAlignment="Center" 
+                                           Margin="5 0" Foreground="White"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="50" Width="168" x:Name="btn_student">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="School" Width="38" Height="36" 
+                                                         VerticalAlignment="Center" Margin="5"
+                                                         Foreground="White"/>
+                                <TextBlock Text="Student" FontSize="22" VerticalAlignment="Center" 
+                                           Margin="10 0" Foreground="White"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="50" Width="168" x:Name="btn_admin">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="SettingsApplications" Width="38" Height="36" 
+                                                         VerticalAlignment="Center" Margin="5"
+                                                         Foreground="White"/>
+                                <TextBlock Text="Admin" FontSize="22" VerticalAlignment="Center" 
+                                           Margin="8 0" Foreground="White"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Shutdown" Width="38" Height="36" 
+                                                         VerticalAlignment="Center" Margin="5"
+                                                         Foreground="White"/>
+                                <TextBlock Text="ShutDown" FontSize="22" VerticalAlignment="Center" 
+                                           Margin="8 0" Foreground="White"/>
+                            </StackPanel>
+                        </ListViewItem>
+
                     </ListView>
+                    <!--Danh sách các chức năng-->
                 </StackPanel>
 
                 <Grid VerticalAlignment="Top" Height="55" Margin="0,520,0,0">
@@ -486,6 +400,8 @@
 
                 </Grid>
             </Grid>
+            <!--//man form//-->
+            
         </Grid>
         <Grid x:Name="nav_info"
               Grid.Column="2"
@@ -570,8 +486,8 @@
         <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
-                        Width="100"
-                        Height="30" Grid.Column="2" Margin="190,1,0,0">
+                        Width="105"
+                        Height="30" Grid.Column="1" Margin="185,1,0,0">
             <Button x:Name="btnSettings" Width="30" Height="30" Padding="0" Background="Transparent" BorderBrush="{x:Null}">
                 <materialDesign:PackIcon Kind="Settings" Width="25" Height="25" Foreground="#FF3580BF"/>
             </Button>

@@ -38,84 +38,53 @@ namespace QuizProject1
         }
 
         
-       
-        private void btnTeaCher_MouseEnter(object sender, MouseEventArgs e)
-        {
-            btnTeaCher.Background = Brushes.Transparent;
-        }
-
-        private void btnShutDown_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown();
-        }
-        private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if(tg_btn.IsChecked == true)
-            {
-                tl_teacher.Visibility = Visibility.Collapsed;
-                tl_student.Visibility = Visibility.Collapsed;
-                tl_admin.Visibility = Visibility.Collapsed;
-                tl_shutdown.Visibility = Visibility.Collapsed;  
-            }
-            else
-            {
-                tl_shutdown.Visibility = Visibility.Visible;
-                tl_student.Visibility= Visibility.Visible;  
-                tl_teacher.Visibility= Visibility.Visible;
-                tl_admin.Visibility= Visibility.Visible;
-            }
-        }
         
+       
 
         private void tg_btn_Checked(object sender, RoutedEventArgs e)
         {
-            nav_info.Opacity = 0.3;
         }
 
         private void tg_btn_Unchecked(object sender, RoutedEventArgs e)
         {
-            nav_info.Opacity = 1;
         }
 
-        private void btnTeaCher_Checked(object sender, RoutedEventArgs e)
+        private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            teacherText.Foreground = Brushes.Black;
-            btnAdmin.IsChecked = false;
-            btnShutDown.IsChecked = false;
-            btnStudent.IsChecked = false;
-            tg_btn.IsChecked = false;
+            int index  = 0;
+            index = LV.SelectedIndex;
+            MoveCursorMenu(index);
+            if (index == 3)
+            {
+                System.Windows.Application.Current.Shutdown();
+            }
+            else if (index == 0)
+            {
+                btn_teacher.Background = Brushes.Purple;
+                btn_student.Background = Brushes.Transparent;
+                btn_admin.Background = Brushes.Transparent;
+                teacher_adminForm f = new teacher_adminForm();
+                main_form.Children.Clear();
+                main_form.Children.Add(f);
+            }
+            else if(index == 1)
+            {
+                btn_teacher.Background = Brushes.Transparent;
+                btn_student.Background = Brushes.Purple;
+                btn_admin.Background = Brushes.Transparent;
+                main_form.Children.Clear(); 
+            }
+            else if(index == 2)
+            {
+                btn_teacher.Background = Brushes.Transparent;
+                btn_student.Background = Brushes.Transparent;
+                btn_admin.Background = Brushes.Purple;
+                main_form.Children.Clear();
+            }
         }
-        
-        private void btnTeaCher_Unchecked(object sender, RoutedEventArgs e)
+        private void MoveCursorMenu(int index)
         {
-            teacherText.Foreground = Brushes.White;
-        }
-
-        private void btnStudent_Checked(object sender, RoutedEventArgs e)
-        {
-            studenttext.Foreground = Brushes.Black;
-            btnTeaCher.IsChecked = false;
-            btnShutDown.IsChecked=false;
-            btnAdmin.IsChecked=false;
-            tg_btn.IsChecked =false;
-        }
-
-        private void btnStudent_Unchecked(object sender, RoutedEventArgs e)
-        {
-            studenttext.Foreground= Brushes.White;  
-        }
-
-        private void btnAdmin_Unchecked(object sender, RoutedEventArgs e)
-        {
-            admintext.Foreground = Brushes.White;
-        }
-
-        private void btnAdmin_Checked(object sender, RoutedEventArgs e)
-        {
-            admintext.Foreground = Brushes.Black;
-            btnTeaCher.IsChecked=false;
-            btnStudent.IsChecked=false;
-            tg_btn.IsChecked =false;
+            
         }
         #endregion
     }
