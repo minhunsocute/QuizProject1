@@ -4,16 +4,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QuizProject1" 
-        xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-            Height="450" Width="380" 
+        Height="450" Width="349" 
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Background="Transparent">
     <Window.Resources>
+        
+        
         <Style TargetType="{x:Type Button}">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontFamily" Value="Helvetica"/>
@@ -80,7 +80,6 @@
                     <TextBox 
                         Margin="20 0 0 5"
                          materialDesign:HintAssist.Hint="Username" 
-                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                          FontFamily="helvetica" 
                          FontSize="18"
                          Width="250"/>
@@ -97,7 +96,6 @@
                     Margin="30 0 0 0" />
                     <PasswordBox Margin="20 15 0 0" 
                              materialDesign:HintAssist.Hint="Password" 
-                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
                              FontFamily="helvetica" 
                              FontSize="18"
                              Width="250"/>
