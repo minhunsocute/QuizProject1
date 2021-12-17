@@ -12,20 +12,27 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
             <materialDesignConverters:BooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" TrueValue="Collapsed" FalseValue="Visible" />
         </ResourceDictionary>
-        
+
     </UserControl.Resources>
-    
-    <Grid Height="570" Width="670" >
+
+    <Grid Height="570" Width="670" Background="#FFECDBDB" >
         <Grid.RowDefinitions>
             <RowDefinition Height="159"/>
             <RowDefinition Height="*"/>
@@ -45,7 +52,7 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="STT" Width="50">
                             <DataGridTextColumn.HeaderStyle>
-                                <Style TargetType="DataGridColumnHeader">  
+                                <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                     <Setter Property="Background" Value="#FF5974E4"/>
                                 </Style>
@@ -88,6 +95,64 @@
                 </DataGrid>
             </Grid>
         </materialDesign:TransitioningContent>
-        
+        <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
+            <Grid Grid.Column="0">
+                <Button x:Name="btn_Insert"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="505,92,20,35"
+                        Background="#FF18ABC7">
+                    <TextBlock Text="Insert Teacher" Foreground="White" />
+                </Button>
+                <Button x:Name="btn_find"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="335,93,190,34"
+                        Background="#FF5261BB">
+                    <TextBlock Text="Find Teacher" Foreground="White" />
+                </Button>
+                <ComboBox
+                        x:Name="Pk_text"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:TextFieldAssist.SuffixText="sw"
+                        materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+                        materialDesign:ColorZoneAssist.Mode="SecondaryLight"
+                        materialDesign:HintAssist.Hint="PKnowledgen"
+                        materialDesign:HintAssist.HelperText="PKnowledgen"
+                        MinWidth="128" Margin="46,87,489,36"
+                        Foreground="#FF5261BB">
+                    <ComboBoxItem Content="Android" />
+                    <ComboBoxItem Content="iOS" />
+                    <ComboBoxItem Content="Linux" />
+                    <ComboBoxItem Content="Windows" />
+                </ComboBox>
+                <Button  
+                        HorizontalAlignment="Left" Margin="9,92,0,0" 
+                        VerticalAlignment="Top" Height="35" Width="30"
+                        Background="#FF5261BB"
+                        Padding="0">
+                    <materialDesign:PackIcon Kind="Search" Width="25" Height="23" Foreground="White"/>
+                </Button>
+                <TextBox
+                         x:Name="searchText"
+                         materialDesign:HintAssist.Hint="Search here"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         VerticalAlignment="Top" Margin="193,86,355,0" 
+                         Foreground="#FF5261BB"/>
+                <Button  
+                        HorizontalAlignment="Left" Margin="9,10,0,0" 
+                        VerticalAlignment="Top" Height="72" Width="76"
+                        Background="Transparent"
+                        Padding="0">
+                    <materialDesign:PackIcon Kind="Teacher" Width="66" Height="50" Foreground="#FF5261BB"/>
+                </Button>
+                <Label Content="Teacher" Margin="90,45,457,79" FontSize="25" Foreground="#FF5261BB"/>
+            </Grid>
+        </materialDesign:TransitioningContent>
     </Grid>
 </UserControl>
