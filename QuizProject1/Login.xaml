@@ -4,16 +4,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizProject1" 
+        xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Height="450" Width="349" 
+        Height="510" Width="354" 
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Background="Transparent">
     <Window.Resources>
-        
-        
         <Style TargetType="{x:Type Button}">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontFamily" Value="Helvetica"/>
@@ -42,71 +42,127 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Grid>
+
+    <Grid Background="#FF5261BB" HorizontalAlignment="Center" 
+          Width="324" Margin="0,10,0,0" Height="495" VerticalAlignment="Top"
+          >
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Border CornerRadius="10"
+                    Background="#FF5261BB" Margin="-10,-10,-7,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.119"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.468"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        
+        <Image Grid.Row="0" Stretch="Fill"
+               Source="D:\project\QuizProject1\QuizProject1\Imag\shutterstock_1664708983.jpg"
+               Opacity="0.6"/>
+        <Button         x:Name="btn_power"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="292,3,3,187" Background="#FF4055CC" Click="btn_power_Click"
+                        >
+            <materialDesign:PackIcon Kind="Power" Width="20" Height="24" Foreground="White" HorizontalAlignment="Center"/>
+
+        </Button>
+        <Grid Margin="60,139,64,25" Grid.RowSpan="2" Background="White">
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <Border CornerRadius="10"
-                Grid.RowSpan="3"
-                Background="#fff" Margin="0,0,0,10">
+                    Background="#fff" Margin="-15,-10,-15,-10" Grid.RowSpan="2">
+
             </Border>
 
-
-            <StackPanel VerticalAlignment="Center">
-                <Image Source="Imag/1.png"
-                   Width="80"/>
-                <TextBlock Text="Quizz App"
+            <Image     Source="D:\project\QuizProject1\QuizProject1\Imag\1.png" Margin="0,11,0,0"
+                       VerticalAlignment="Top" Height="93"
+                       HorizontalAlignment="Center" Width="96"/>
+            <TextBlock Text="Quizz App"
                        FontWeight="Light"
                        FontFamily="helvetica"
                        FontSize="22"
                        Foreground="Black"
-                       HorizontalAlignment="Center"
-                       Margin="0 10 0 0"/>
-            </StackPanel>
+                       HorizontalAlignment="Center" Width="98" Height="28" VerticalAlignment="Top" Margin="0,115,0,0"/>
 
-            <StackPanel Grid.Row="1" >
-                <Grid>
-                    <materialDesign:PackIcon 
-                    Kind="Account" 
-                    Foreground="Black"
-                    Width="30" 
-                    Height="30" 
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom"  
-                    Margin="30 0 0 0" />
-                    <TextBox 
-                        Margin="20 0 0 5"
+
+            <Grid Grid.Row="1">
+
+                <TextBox x:Name="text_userName"
+                         Margin="35,4,3,136"
                          materialDesign:HintAssist.Hint="Username" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                          FontFamily="helvetica" 
-                         FontSize="18"
-                         Width="250"/>
-                </Grid>
+                         FontSize="15"
+                         Foreground="#FF5261BB" TextChanged="TextBox_TextChanged"/>
 
-                <Grid>
-                    <materialDesign:PackIcon 
-                    Kind="Lock" 
-                    Foreground="Black"
-                    Width="30" 
-                    Height="30" 
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom"  
-                    Margin="30 0 0 0" />
-                    <PasswordBox Margin="20 15 0 0" 
-                             materialDesign:HintAssist.Hint="Password" 
-                             FontFamily="helvetica" 
-                             FontSize="18"
-                             Width="250"/>
-                </Grid>
 
-                <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
-                    <Button Width="100" Height="50" Content="LOGIN" Margin="60,0,60,0"/>
-                    <Button Width="100" Height="50" Content="REGISTER"/>
-                </StackPanel>
+                <PasswordBox
+                        x:Name="text_pass"
+                        materialDesign:HintAssist.Hint="Password"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:HintAssist.HelperText="At least 8 characters" Margin="35,42,5,0"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                        Height="41" FontSize="15" VerticalAlignment="Top" Foreground="#FF5261BB"/>
 
-            </StackPanel>
+                <Button x:Name="btn_signIn"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="6,121,104,28" Background="#FF4556BD" Click="btn_signIn_Click">
+                    <TextBlock Text="Sign In" Foreground="White" />
+                </Button>
+                <Button x:Name="btn_signUp"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="105,120,5,29" Background="#FFBD7145">
+                    <TextBlock Text="Sign Up" Foreground="White" />
+                </Button>
+                <Button
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="0,18,170,131" Background="Transparent">
+                    <materialDesign:PackIcon Kind="User" Width="24" Height="24" Foreground="#FF5261BB" HorizontalAlignment="Center"/>
+
+                </Button>
+                <Button
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="1,62,169,87" Background="Transparent">
+                    <materialDesign:PackIcon Kind="Key" Width="20" Height="24" Foreground="#FF5261BB" HorizontalAlignment="Center"/>
+
+                </Button>
+                <Button x:Name="btn_forgetPass"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        materialDesign:ButtonAssist.CornerRadius="5"
+                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                        Margin="30,162,35,-1" Background="#FFF1EDED" Height="20">
+                    <TextBlock Text="Forget Password" Foreground="#FF4556BD" FontSize="9" />
+                </Button>
+            </Grid>
+            <Grid.Effect>
+                <!--<DropShadowBitmapEffect Color="Black" Direction="200" ShadowDepth="10" Softness=".9"/>-->
+                <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="5" />
+            </Grid.Effect>
+            <!---->
         </Grid>
     </Grid>
 </Window>

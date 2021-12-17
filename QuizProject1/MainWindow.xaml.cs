@@ -34,7 +34,7 @@ namespace QuizProject1
         #region events Click
         private void btnPower_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            this.Visibility = Visibility.Collapsed;
         }
 
         

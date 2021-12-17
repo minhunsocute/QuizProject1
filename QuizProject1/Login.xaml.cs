@@ -23,5 +23,23 @@ namespace QuizProject1
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btn_signIn_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            this.Hide();
+            mainWindow.ShowDialog();
+            this.Show();
+        }
+            
+        private void btn_power_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }
