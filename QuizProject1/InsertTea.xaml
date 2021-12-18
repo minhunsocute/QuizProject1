@@ -89,7 +89,7 @@
                 <ComboBoxItem Content="Math"/>
             </ComboBox>
             <Grid.Effect>
-                <DropShadowEffect Color="Black" Direction="200" ShadowDepth="4" />
+                <DropShadowEffect Color="Black" Direction="200" ShadowDepth="2" />
             </Grid.Effect>
         </Grid>
         <Grid Grid.Row="1">
@@ -118,7 +118,7 @@
         </Grid>
 
         <Grid.Effect>
-            <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="7" />
+            <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="2" />
         </Grid.Effect>
 
     </Grid>

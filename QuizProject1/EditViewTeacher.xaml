@@ -124,7 +124,7 @@
                         x:Name="btn_next" Click="btn_next_Click"/>
                 <Grid.Effect>
                     <DropShadowEffect Color="#FF7E6FB3" Direction="200" 
-                                      ShadowDepth="5" />
+                                      ShadowDepth="3" />
                 </Grid.Effect>
             </Grid>
 
@@ -139,7 +139,7 @@
                    Foreground="#FF5261BB" Grid.Row="1"/>
 
         <Grid.Effect>
-            <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="5" />
+            <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="3" />
         </Grid.Effect>
     </Grid>
 </Window>
