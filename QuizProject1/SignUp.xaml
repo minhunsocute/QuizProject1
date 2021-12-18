@@ -91,7 +91,7 @@
                          Foreground="#FF5261BB" 
                          />
                 <TextBox x:Name="text_email"
-                         Margin="28,55,10,122"
+                         Margin="28,49,10,128"
                          materialDesign:HintAssist.Hint="Email" 
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                          FontFamily="helvetica" 
@@ -102,9 +102,8 @@
                 <materialDesign:PackIcon Kind="Email" 
                                          Width="20" 
                                          Height="24" 
-                                         Margin="-4 70 0 0"
-                                         Foreground="#FF5261BB" 
-                                         HorizontalAlignment="Left"/>
+                                         Margin="-4,68,0,0"
+                                         Foreground="#FF5261BB"/>
                 <PasswordBox
                         x:Name="text_pass"
                         materialDesign:HintAssist.Hint="Password"

@@ -96,7 +96,7 @@
             </Grid>
         </materialDesign:TransitioningContent>
         <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Margin="0,2,0,-2">
                 <Button x:Name="btn_Insert"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         materialDesign:ButtonAssist.CornerRadius="5"
@@ -112,7 +112,7 @@
                         ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="335,93,190,34"
-                        Background="#FF5261BB" Click="btn_find_Click">
+                        Background="#FF5261BB" Click="btn_find_Click_1">
                     <TextBlock Text="Find Teacher" Foreground="White" />
                 </Button>
                 <ComboBox

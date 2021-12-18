@@ -43,7 +43,8 @@
             <Button Margin="450,3,15,5" x:Name="btn_shutdown" Click="btn_shutdown_Click">
                 <materialDesign:PackIcon Kind="Power" Width="48" HorizontalAlignment="Center" Height="28"/>
             </Button>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="274">
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Left" Width="274">
                 <materialDesign:PackIcon Kind="EventEdit" Height="40" Width="78" 
                                          Foreground="#FF157BCC" VerticalAlignment="Center"/>
                 <TextBlock Text="View and Edit Teacher" FontSize="20" 
@@ -60,9 +61,11 @@
                 Grid.RowSpan="2">
                 </Border>
                 <materialDesign:PackIcon Kind="IdCardOutline" Height="54" Width="30" 
-                                         Margin="10,20,0,0" Foreground="#FF5261BB" RenderTransformOrigin="5.048,0.963"/>
+                                         Margin="10,20,0,0" Foreground="#FF5261BB" 
+                                         RenderTransformOrigin="5.048,0.963"/>
                 <materialDesign:PackIcon Kind="User" Height="44" Width="31" 
-                                         Margin="11,86,0,0" Foreground="#FF5261BB" RenderTransformOrigin="0.661,-0.111"/>
+                                         Margin="11,86,0,0" Foreground="#FF5261BB" 
+                                         RenderTransformOrigin="0.661,-0.111"/>
                 <materialDesign:PackIcon Kind="Calendar" Height="54" Width="30" 
                                          Margin="11,150,0,0" Foreground="#FF5261BB"/>
                 <materialDesign:PackIcon Kind="Notebook" Height="44" Width="30" 
@@ -76,7 +79,8 @@
                     VerticalScrollBarVisibility="Auto"
                     materialDesign:HintAssist.Hint="ID Teacher"
                     IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
-                    Margin="49,22,21,0" Text="20120491" RenderTransformOrigin="0.5,0.5">
+                    Margin="49,22,21,0" Text="20120491" 
+                    RenderTransformOrigin="0.5,0.5">
                     <TextBox.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleX="1"/>
@@ -119,7 +123,8 @@
                 <Button Content="Next" Margin="143,280,22,-32"
                         x:Name="btn_next"/>
                 <Grid.Effect>
-                    <DropShadowEffect Color="#FF7E6FB3" Direction="200" ShadowDepth="5" />
+                    <DropShadowEffect Color="#FF7E6FB3" Direction="200" 
+                                      ShadowDepth="5" />
                 </Grid.Effect>
             </Grid>
 
@@ -130,8 +135,8 @@
             </Ellipse.Fill>
         </Ellipse>
         <TextBlock Text="HHProject" FontSize="15" 
-                           VerticalAlignment="Top" Margin="60,345,379,0"
-                           Foreground="#FF5261BB" Grid.Row="1"/>
+                   VerticalAlignment="Top" Margin="60,345,379,0"
+                   Foreground="#FF5261BB" Grid.Row="1"/>
 
         <Grid.Effect>
             <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="5" />

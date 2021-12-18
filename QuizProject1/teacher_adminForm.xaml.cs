@@ -33,7 +33,9 @@ namespace QuizProject1
             this.Opacity = 1;
         }
 
-        private void btn_find_Click(object sender, RoutedEventArgs e)
+        
+
+        private void btn_find_Click_1(object sender, RoutedEventArgs e)
         {
             this.Opacity = 0.6;
             EditViewTeacher f = new EditViewTeacher();
