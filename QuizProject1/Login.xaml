@@ -76,7 +76,7 @@
             <materialDesign:PackIcon Kind="Power" Width="20" Height="24" Foreground="White" HorizontalAlignment="Center"/>
 
         </Button>
-        <Grid Margin="60,139,64,25" Grid.RowSpan="2" Background="White">
+        <Grid Margin="66,139,58,25" Grid.RowSpan="2" Background="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="*"/>
@@ -120,7 +120,6 @@
                 <Button x:Name="btn_signIn"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="6,121,104,28" Background="#FF4556BD" Click="btn_signIn_Click">
                     <TextBlock Text="Sign In" Foreground="White" />
@@ -128,14 +127,12 @@
                 <Button x:Name="btn_signUp"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="105,120,5,29" Background="#FFBD7145">
                     <TextBlock Text="Sign Up" Foreground="White" />
                 </Button>
                 <Button
                         materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="0,18,170,131" Background="Transparent">
                     <materialDesign:PackIcon Kind="User" Width="24" Height="24" Foreground="#FF5261BB" HorizontalAlignment="Center"/>
@@ -143,7 +140,6 @@
                 </Button>
                 <Button
                         materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="1,62,169,87" Background="Transparent">
                     <materialDesign:PackIcon Kind="Key" Width="20" Height="24" Foreground="#FF5261BB" HorizontalAlignment="Center"/>
@@ -152,7 +148,6 @@
                 <Button x:Name="btn_forgetPass"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="30,162,35,-1" Background="#FFF1EDED" Height="20">
                     <TextBlock Text="Forget Password" Foreground="#FF4556BD" FontSize="9" />
