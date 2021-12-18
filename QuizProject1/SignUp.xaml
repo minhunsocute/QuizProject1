@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:QuizProject1" 
         xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Height="600" Width="354" 
+        Height="564" Width="354" 
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -38,20 +38,19 @@
             </Border.RenderTransform>
         </Border>
 
-        <Image Grid.Row="0" Stretch="Fill"
-               Source="C:\Users\USER\source\repos\QuizProject1\QuizProject1\Imag\shutterstock_1664708983.jpg"
-               Opacity="0.6"/>
-        <Button         x:Name="btn_power"
-                        materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
-                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                        Margin="292,3,3,187" Background="#FF4055CC" Click="btn_power_Click"
-                        >
+        <Image  Grid.Row="0" Stretch="Fill"
+                Source="D:\project\QuizProject1\QuizProject1\Imag\exampic.jpg"
+                Opacity="0.6"/>
+        <Button x:Name="btn_power"
+                materialDesign:ButtonAssist.CornerRadius="5"
+                ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                Margin="270,8,3,180" Background="#FF5261BB" Click="btn_power_Click">
             <materialDesign:PackIcon Kind="Power" 
-                                     Width="20" 
+                                     Width="40" 
                                      Height="24" 
                                      Foreground="White" 
-                                     HorizontalAlignment="Center"/>
+                                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         </Button>
         <Grid Margin="66,139,58,40" Grid.RowSpan="2" Background="White">
@@ -65,7 +64,7 @@
 
             </Border>
 
-            <Image     Source="C:\Users\USER\source\repos\QuizProject1\QuizProject1\Imag\1.png" Margin="0,11,0,0"
+            <Image     Source="D:\project\QuizProject1\QuizProject1\Imag\1.png" Margin="0,11,0,0"
                        VerticalAlignment="Top" Height="93"
                        HorizontalAlignment="Center" Width="96"/>
             <TextBlock Text="Quizz App"
@@ -144,7 +143,7 @@
                         VerticalAlignment="Bottom"
                         Content="Sign Up"
                         >
-                   
+
                 </Button>
 
 

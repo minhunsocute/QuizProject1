@@ -34,7 +34,7 @@ namespace QuizProject1
 
         private void btn_power_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            this.Close();
         }
     }
 }

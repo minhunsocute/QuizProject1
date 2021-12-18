@@ -41,5 +41,13 @@ namespace QuizProject1
         {
             System.Windows.Application.Current.Shutdown();
         }
+
+        private void btn_signUp_Click(object sender, RoutedEventArgs e)
+        {
+            var signnUp = new SignUp();
+            this.Hide();
+            signnUp.ShowDialog();
+            this.Show();
+        }
     }
 }

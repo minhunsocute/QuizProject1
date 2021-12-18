@@ -65,7 +65,7 @@
         </Border>
         
         <Image Grid.Row="0" Stretch="Fill"
-               Source="C:\Users\USER\source\repos\QuizProject1\QuizProject1\Imag\shutterstock_1664708983.jpg"
+               Source="D:\project\QuizProject1\QuizProject1\Imag\shutterstock_1664708983.jpg"
                Opacity="0.6"/>
         <Button         x:Name="btn_power"
                         materialDesign:ButtonAssist.CornerRadius="5"
@@ -86,7 +86,7 @@
                     Background="#fff" Margin="-15,-10,-15,-10" Grid.RowSpan="2">
             </Border>
 
-            <Image     Source="C:\Users\USER\source\repos\QuizProject1\QuizProject1\Imag\1.png" Margin="0,11,0,0"
+            <Image     Source="D:\project\QuizProject1\QuizProject1\Imag\1.png" Margin="0,11,0,0"
                        VerticalAlignment="Top" Height="93"
                        HorizontalAlignment="Center" Width="96"/>
             <TextBlock Text="Quizz App"
@@ -127,7 +127,7 @@
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         materialDesign:ButtonAssist.CornerRadius="5"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                        Margin="105,120,5,29" Background="#FFBD7145">
+                        Margin="105,120,5,29" Background="#FFBD7145" Click="btn_signUp_Click">
                     <TextBlock Text="Sign Up" Foreground="White" />
                 </Button>
                 <Button
