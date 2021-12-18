@@ -32,5 +32,6 @@ namespace QuizProject1
             f.ShowDialog();
             this.Opacity = 1;
         }
+
     }
 }

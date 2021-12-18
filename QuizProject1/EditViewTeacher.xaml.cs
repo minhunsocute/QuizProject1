@@ -15,22 +15,13 @@ using System.Windows.Shapes;
 namespace QuizProject1
 {
     /// <summary>
-    /// Interaction logic for InsertTea.xaml
+    /// Interaction logic for EditViewTeacher.xaml
     /// </summary>
-    public partial class InsertTea : Window
+    public partial class EditViewTeacher : Window
     {
-        public InsertTea()
+        public EditViewTeacher()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button_Insert_Click(object sender, RoutedEventArgs e)
-        {
         }
     }
 }
