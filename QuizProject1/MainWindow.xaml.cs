@@ -54,7 +54,7 @@ namespace QuizProject1
             int index  = 0;
             index = LV.SelectedIndex;
             MoveCursorMenu(index);
-            if (index == 3)
+            if (index == 4)
             {
                 System.Windows.Application.Current.Shutdown();
             }
@@ -63,6 +63,7 @@ namespace QuizProject1
                 btn_teacher.Background = Brushes.Purple;
                 btn_student.Background = Brushes.Transparent;
                 btn_admin.Background = Brushes.Transparent;
+                btn_setting.Background = Brushes.Transparent;
                 teacher_adminForm f = new teacher_adminForm();
                 main_form.Children.Clear();
                 main_form.Children.Add(f);
@@ -72,6 +73,7 @@ namespace QuizProject1
                 btn_teacher.Background = Brushes.Transparent;
                 btn_student.Background = Brushes.Purple;
                 btn_admin.Background = Brushes.Transparent;
+                btn_setting.Background = Brushes.Transparent;
                 main_form.Children.Clear(); 
             }
             else if(index == 2)
@@ -79,6 +81,15 @@ namespace QuizProject1
                 btn_teacher.Background = Brushes.Transparent;
                 btn_student.Background = Brushes.Transparent;
                 btn_admin.Background = Brushes.Purple;
+                btn_setting.Background = Brushes.Transparent;
+                main_form.Children.Clear();
+            }
+            else if(index == 3)
+            {
+                btn_teacher.Background = Brushes.Transparent;
+                btn_student.Background= Brushes.Transparent;   
+                btn_admin.Background= Brushes.Transparent;
+                btn_setting.Background = Brushes.Purple;
                 main_form.Children.Clear();
             }
         }
