@@ -29,7 +29,7 @@
         </Border>
         <Image HorizontalAlignment="Left" Height="185" Margin="25,50,0,0" 
                    VerticalAlignment="Top" Width="191" Opacity="0.7"
-                   Source="D:\project\QuizProject1\QuizProject1\Imag\1.png"
+                   Source="Imag\1.png"
                    Stretch="Fill" Grid.Row="1"/>
         <Button HorizontalAlignment="Left" Margin="88,194,0,0" 
                     VerticalAlignment="Top" Background="#FF5261BB" Width="66" Grid.Row="1">
@@ -131,7 +131,7 @@
         </Grid>
         <Ellipse Margin="15,338,465,18" Grid.Row="1">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"/>
+                <ImageBrush ImageSource="Imag\mylogo.png"/>
             </Ellipse.Fill>
         </Ellipse>
         <TextBlock Text="HHProject" FontSize="15" 

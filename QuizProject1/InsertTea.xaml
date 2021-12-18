@@ -98,7 +98,7 @@
                         Background="#FF5261BB" Grid.RowSpan="2"/>
                 <Image HorizontalAlignment="Left" Height="135" 
                    Margin="32,0,0,0" VerticalAlignment="Center" Width="126"
-                   Source="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"/>
+                   Source="Imag\mylogo.png"/>
                 <Button HorizontalAlignment="Left" 
                     Margin="186,103,0,0" VerticalAlignment="Top"
                     Background="#FF2196F3">

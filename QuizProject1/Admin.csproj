@@ -153,12 +153,37 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Imag\1.png" />
+    <Resource Include="Imag\student-with-graduation-cap.png" />
+    <Resource Include="Imag\student.png" />
+    <Resource Include="Imag\success.png" />
+    <Resource Include="Imag\teacher.png" />
+    <Resource Include="Imag\teacherOver.png" />
+    <Resource Include="Imag\youtube %281%29.png" />
+    <Resource Include="Imag\youtube %282%29.png" />
+    <Resource Include="Imag\youtube.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imag\shutterstock_1664708983.jpg" />
+    <Resource Include="Imag\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\shutterstock_1664708983.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\129797309_1008918169574285_3837839971887269051_n1.jpg" />
+    <Resource Include="Imag\6-benefits-of-online-exam-marking.jpg" />
+    <Resource Include="Imag\administrator %281%29.png" />
+    <Resource Include="Imag\administrator.png" />
+    <Resource Include="Imag\browser.png" />
+    <Resource Include="Imag\exam.jpg" />
+    <Resource Include="Imag\exampic.jpg" />
+    <Resource Include="Imag\images.jpg" />
+    <Resource Include="Imag\menu.png" />
+    <Resource Include="Imag\menu1.png" />
+    <Resource Include="Imag\mylogo.png" />
+    <Resource Include="Imag\power-on-semicircle-.png" />
+    <Resource Include="Imag\power.png" />
+    <Resource Include="Imag\quiz-clipart-vector-5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />

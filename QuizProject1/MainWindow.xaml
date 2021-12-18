@@ -45,7 +45,7 @@
         <!--//Toggle Button style templete//-->
 
         <ImageBrush x:Key="tb_mouse_over"
-                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\menu1.png"/>
+                    ImageSource="Imag\menu1.png"/>
         <Style x:Key="tb_style" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -74,13 +74,13 @@
         </Style>
         <!--//Style Button1//-->
         <ImageBrush x:Key="tb_Teacher_over"
-                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\teacherOver.png"/>
+                    ImageSource="Imag\teacherOver.png"/>
         <ImageBrush x:Key="tb_Student_over"
-                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\student.png"/>
+                    ImageSource="Imag\student.png"/>
         <ImageBrush x:Key="tb_admin_over"
-                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\administrator (1).png"/>
+                    ImageSource="Imag\administrator (1).png"/>
         <ImageBrush x:Key="tb_shutdown_over"
-                    ImageSource="D:\project\QuizProject1\QuizProject1\Imag\power.png"/>
+                    ImageSource="Imag\power.png"/>
         <Style x:Key="btn_style" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -260,7 +260,7 @@
                     <StackPanel Width="230" Orientation="Horizontal" Height="70">
                         <Ellipse Height="45" Width ="50" Stroke="White" Margin="4 10" >
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
+                                <ImageBrush ImageSource="Imag\mylogo.png"
                                     Stretch="Fill"/>
                             </Ellipse.Fill>
 
@@ -293,7 +293,7 @@
                                       Style="{StaticResource tb_style}" 
                                       Checked="tg_btn_Checked" Unchecked="tg_btn_Unchecked">
                             <ToggleButton.Background>
-                                <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\menu.png"/>
+                                <ImageBrush ImageSource="Imag\menu.png"/>
                             </ToggleButton.Background>
 
                         </ToggleButton>
@@ -417,13 +417,13 @@
               Margin="0,30,0,0"
               Background="#FF5261BB"
               HorizontalAlignment="Right">
-            <Image Source="D:\project\QuizProject1\QuizProject1\Imag\exam.jpg"
+            <Image Source="Imag\exam.jpg"
                    Stretch="Fill" Height="154" VerticalAlignment="Top"/>
 
             <Ellipse Height="100" Width ="100" Margin="0,110,72,0" VerticalAlignment="Top"
                      HorizontalAlignment="Right" Stroke="White">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="D:\project\QuizProject1\QuizProject1\Imag\mylogo.png"
+                    <ImageBrush ImageSource="Imag\mylogo.png"
                                 Stretch="Fill"/>
                 </Ellipse.Fill>
                 <Ellipse.BitmapEffect>
@@ -459,7 +459,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Grid.Column="0"  
-                       Source="D:\project\QuizProject1\QuizProject1\Imag\shutterstock_1664708983.jpg"
+                       Source="Imag\shutterstock_1664708983.jpg"
                        >
                     <Image.Effect>
                         <!--<DropShadowBitmapEffect Color="Black" Direction="200" ShadowDepth="10" Softness=".9"/-->
@@ -468,7 +468,7 @@
                 </Image>
 
                 <Image Grid.Row="1" Grid.Column="1"  
-                       Source="D:\project\QuizProject1\QuizProject1\Imag\exampic.jpg"
+                       Source="Imag\exampic.jpg"
                        >
                     <Image.Effect>
                         <!--<DropShadowBitmapEffect Color="Black" Direction="200" ShadowDepth="10" Softness=".9"/-->
