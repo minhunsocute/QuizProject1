@@ -23,5 +23,10 @@ namespace QuizProject1
         {
             InitializeComponent();
         }
+
+        private void btn_shutdown_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

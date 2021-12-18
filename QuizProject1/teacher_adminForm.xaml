@@ -112,7 +112,7 @@
                         ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="335,93,190,34"
-                        Background="#FF5261BB">
+                        Background="#FF5261BB" Click="btn_find_Click">
                     <TextBlock Text="Find Teacher" Foreground="White" />
                 </Button>
                 <ComboBox
