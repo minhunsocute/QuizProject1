@@ -64,12 +64,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="InsertTea.xaml.cs">
+      <DependentUpon>InsertTea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTeacher.xaml.cs">
+      <DependentUpon>InsertTeacher.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="teacher_adminForm.xaml.cs">
       <DependentUpon>teacher_adminForm.xaml</DependentUpon>
     </Compile>
+    <Page Include="InsertTea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InsertTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

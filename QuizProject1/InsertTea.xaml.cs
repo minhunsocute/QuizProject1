@@ -10,27 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace QuizProject1
 {
     /// <summary>
-    /// Interaction logic for teacher_adminForm.xaml
+    /// Interaction logic for InsertTea.xaml
     /// </summary>
-    public partial class teacher_adminForm : UserControl
+    public partial class InsertTea : Window
     {
-        public teacher_adminForm()
+        public InsertTea()
         {
             InitializeComponent();
         }
 
-        private void btn_Insert_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Opacity = 0.6;
-            InsertTea f = new InsertTea();
-            f.ShowDialog();
-            this.Opacity = 1;
+            this.Close();
         }
     }
 }
