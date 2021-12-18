@@ -103,7 +103,7 @@
                         ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                         Margin="505,92,20,35"
-                        Background="#FF18ABC7">
+                        Background="#FF18ABC7" Click="btn_Insert_Click">
                     <TextBlock Text="Insert Teacher" Foreground="White" />
                 </Button>
                 <Button x:Name="btn_find"
