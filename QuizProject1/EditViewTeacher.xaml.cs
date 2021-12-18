@@ -28,5 +28,21 @@ namespace QuizProject1
         {
             this.Close();
         }
+
+        private void btn_next_Click(object sender, RoutedEventArgs e)
+        {
+            this.Opacity = 0.6;
+            Error_form f= new Error_form();
+            f.ShowDialog();
+            this.Opacity = 1;
+        }
+
+        private void btn_save_Click(object sender, RoutedEventArgs e)
+        {
+            this.Opacity = 0.6;
+            Success_form f = new Success_form();
+            f.ShowDialog();
+            this.Opacity= 1;
+        }
     }
 }

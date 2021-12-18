@@ -119,9 +119,9 @@
                     <ComboBoxItem Content="Math"/>
                 </ComboBox>
                 <Button Content="Save" Margin="49,280,118,-32"
-                    Background="#FF5261BB" x:Name="btn_save"/>
+                    Background="#FF5261BB" x:Name="btn_save" Click="btn_save_Click"/>
                 <Button Content="Next" Margin="143,280,22,-32"
-                        x:Name="btn_next"/>
+                        x:Name="btn_next" Click="btn_next_Click"/>
                 <Grid.Effect>
                     <DropShadowEffect Color="#FF7E6FB3" Direction="200" 
                                       ShadowDepth="5" />

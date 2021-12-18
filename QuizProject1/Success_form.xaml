@@ -1,0 +1,56 @@
+﻿<Window x:Class="QuizProject1.Success_form"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizProject1" 
+        xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="Error_form" Height="234" Width="504"
+        Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        AllowsTransparency="True">
+    <Grid
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center"
+          Background="White" Height="196" Width="462">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10"
+                Background="#FFBBB2E4" Margin="-15,-10,-15,-10" 
+                Grid.RowSpan="2">
+            <Button x:Name="btn_OK"
+                    Content="OK" 
+                    Margin="194,174,190,10" 
+                    Background="#FF9BD45A" Click="btn_OK_Click"/>
+        </Border>
+        <Grid
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Background="#FF2196F3" Height="40" Width="442">
+            <Border CornerRadius="10"
+                Background="#FF2196F3" Margin="-15,-5,-16,-5"/>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="13,0,0,0">
+                <materialDesign:PackIcon Kind="CalendarMultipleCheck" Height="41" 
+                                         Width="39" Foreground="#FF3EFF4A"/>
+                <TextBlock Text="Success" Width="170" Foreground="#FF3EFF4A"
+                           FontSize="23" Height="38" Margin="7"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Image Margin="19,19,362,50" Source="D:\project\QuizProject1\QuizProject1\Imag\success.png">
+            </Image>
+            <TextBlock Text="Login is success" Foreground="White"
+                       FontSize="20" Margin="101,41,5,68"
+                       x:Name="text_success"/>
+        </Grid>
+        <Grid.Effect>
+            <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="5" />
+        </Grid.Effect>
+    </Grid>
+</Window>
