@@ -105,6 +105,8 @@ namespace QuizProject1
                 
                 btn_setting.Background = Brushes.Transparent;
                 main_form.Children.Clear();
+                mainStudentForm f = new mainStudentForm();
+                f.ShowDialog();
             }
             else if(index == 3)
             {
