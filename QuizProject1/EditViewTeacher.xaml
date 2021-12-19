@@ -14,63 +14,66 @@
         AllowsTransparency="True"
         Background="Transparent"
         >
-    <Grid VerticalAlignment="Center"
-          HorizontalAlignment="Center" Height="439" Width="520">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect Kind=FadeIn, Duration=0:0:0.6}">
 
-        <Border CornerRadius="10"
+        <Grid VerticalAlignment="Center"
+          HorizontalAlignment="Center" Height="439" Width="520">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="10"
                 Background="#FFECDBDB" Margin="-15,-10,-15,-10" 
                 Grid.RowSpan="2">
 
 
-        </Border>
-        <Image HorizontalAlignment="Left" Height="185" Margin="25,50,0,0" 
+            </Border>
+            <Image HorizontalAlignment="Left" Height="185" Margin="25,50,0,0" 
                    VerticalAlignment="Top" Width="191" Opacity="0.7"
                    Source="Imag\1.png"
                    Stretch="Fill" Grid.Row="1"/>
-        <Button HorizontalAlignment="Left" Margin="88,194,0,0" 
+            <Button HorizontalAlignment="Left" Margin="88,194,0,0" 
                     VerticalAlignment="Top" Background="#FF5261BB" Width="66" Grid.Row="1">
-            <materialDesign:PackIcon Kind="Camera" VerticalAlignment="Center" Width="33" Height="24" HorizontalAlignment="Center"/>
-            <Button.Effect>
-                <DropShadowEffect Color="Black" Direction="200" ShadowDepth="3"/>
-            </Button.Effect>
-        </Button>
-        <Grid Grid.Row="0">
-
-            <Button Margin="450,3,15,5" x:Name="btn_shutdown" Click="btn_shutdown_Click">
-                <materialDesign:PackIcon Kind="Power" Width="48" HorizontalAlignment="Center" Height="28"/>
+                <materialDesign:PackIcon Kind="Camera" VerticalAlignment="Center" Width="33" Height="24" HorizontalAlignment="Center"/>
+                <Button.Effect>
+                    <DropShadowEffect Color="Black" Direction="200" ShadowDepth="3"/>
+                </Button.Effect>
             </Button>
-            <StackPanel Orientation="Horizontal" 
+            <Grid Grid.Row="0">
+
+                <Button Margin="450,3,15,5" x:Name="btn_shutdown" Click="btn_shutdown_Click">
+                    <materialDesign:PackIcon Kind="Power" Width="48" HorizontalAlignment="Center" Height="28"/>
+                </Button>
+                <StackPanel Orientation="Horizontal" 
                         HorizontalAlignment="Left" Width="274">
-                <materialDesign:PackIcon Kind="EventEdit" Height="40" Width="78" 
+                    <materialDesign:PackIcon Kind="EventEdit" Height="40" Width="78" 
                                          Foreground="#FF157BCC" VerticalAlignment="Center"/>
-                <TextBlock Text="View and Edit Teacher" FontSize="20" 
+                    <TextBlock Text="View and Edit Teacher" FontSize="20" 
                            VerticalAlignment="Center" Margin="-10"
                            Foreground="#FF157BCC"/>
-            </StackPanel>
+                </StackPanel>
 
-        </Grid>
-        <Grid Grid.Row="1" Margin="260,0,0,64">
+            </Grid>
+            <Grid Grid.Row="1" Margin="260,0,0,64">
 
-            <Grid Margin="-12,35,22,10">
-                <Border CornerRadius="10"
+                <Grid Margin="-12,35,22,10">
+                    <Border CornerRadius="10"
                 Background="White" Margin="-15,-10,-15,-10" 
                 Grid.RowSpan="2">
-                </Border>
-                <materialDesign:PackIcon Kind="IdCardOutline" Height="54" Width="30" 
+                    </Border>
+                    <materialDesign:PackIcon Kind="IdCardOutline" Height="54" Width="30" 
                                          Margin="10,20,0,0" Foreground="#FF5261BB" 
                                          RenderTransformOrigin="5.048,0.963"/>
-                <materialDesign:PackIcon Kind="User" Height="44" Width="31" 
+                    <materialDesign:PackIcon Kind="User" Height="44" Width="31" 
                                          Margin="11,86,0,0" Foreground="#FF5261BB" 
                                          RenderTransformOrigin="0.661,-0.111"/>
-                <materialDesign:PackIcon Kind="Calendar" Height="54" Width="30" 
+                    <materialDesign:PackIcon Kind="Calendar" Height="54" Width="30" 
                                          Margin="11,150,0,0" Foreground="#FF5261BB"/>
-                <materialDesign:PackIcon Kind="Notebook" Height="44" Width="30" 
+                    <materialDesign:PackIcon Kind="Notebook" Height="44" Width="30" 
                                          Margin="12,218,0,0" Foreground="#FF5261BB"/>
-                <TextBox
+                    <TextBox
+                    x:Name="ID"
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     VerticalAlignment="Top"
                     Height="50"
@@ -81,16 +84,17 @@
                     IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
                     Margin="49,22,21,0" Text="20120491" 
                     RenderTransformOrigin="0.5,0.5">
-                    <TextBox.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </TextBox.RenderTransform>
-                </TextBox>
-                <TextBox
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <TextBox
+                    x:Name="nameTeacher"
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     VerticalAlignment="Top"
                     Height="50"
@@ -100,46 +104,48 @@
                     materialDesign:HintAssist.Hint="Name Teacher"
                     IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
                     Margin="49,86,21,0" Text="Nguyễn Minh Hưng" />
-                <DatePicker
+                    <DatePicker
+                    x:Name="Date_born"
                     materialDesign:HintAssist.Hint="Date Born"
                     Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="49,154,22,0" 
                     VerticalAlignment="Top" Height="50" />
-                <ComboBox
-                    x:Name="OutlinedComboBox"
+                    <ComboBox
+                    x:Name="pKBox"
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"
                     IsEnabled="{Binding Path=IsChecked, ElementName=OutlinedComboBoxEnabledCheckBox}"
                     materialDesign:HintAssist.Hint="Professional Knowledgen"
                     ItemsSource="{Binding ShortStringList}" Margin="48,215,22,13" >
-                    <ComboBoxItem Content="English"/>
-                    <ComboBoxItem Content="Biology"/>
-                    <ComboBoxItem Content="Chemistry"/>
-                    <ComboBoxItem Content="Computer science"/>
-                    <ComboBoxItem Content="Geology"/>
-                    <ComboBoxItem Content="Information Technology"/>
-                    <ComboBoxItem Content="Math"/>
-                </ComboBox>
-                <Button Content="Save" Margin="49,280,118,-32"
+                        <ComboBoxItem Content="English"/>
+                        <ComboBoxItem Content="Biology"/>
+                        <ComboBoxItem Content="Chemistry"/>
+                        <ComboBoxItem Content="Computer science"/>
+                        <ComboBoxItem Content="Geology"/>
+                        <ComboBoxItem Content="Information Technology"/>
+                        <ComboBoxItem Content="Math"/>
+                    </ComboBox>
+                    <Button Content="Save" Margin="49,280,118,-32"
                     Background="#FF5261BB" x:Name="btn_save" Click="btn_save_Click"/>
-                <Button Content="Next" Margin="143,280,22,-32"
+                    <Button Content="Next" Margin="143,280,22,-32"
                         x:Name="btn_next" Click="btn_next_Click"/>
-                <Grid.Effect>
-                    <DropShadowEffect Color="#FF7E6FB3" Direction="200" 
+                    <Grid.Effect>
+                        <DropShadowEffect Color="#FF7E6FB3" Direction="200" 
                                       ShadowDepth="3" />
-                </Grid.Effect>
-            </Grid>
+                    </Grid.Effect>
+                </Grid>
 
-        </Grid>
-        <Ellipse Margin="15,338,465,18" Grid.Row="1">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="Imag\mylogo.png"/>
-            </Ellipse.Fill>
-        </Ellipse>
-        <TextBlock Text="HHProject" FontSize="15" 
+            </Grid>
+            <Ellipse Margin="15,338,465,18" Grid.Row="1">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="Imag\mylogo.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="HHProject" FontSize="15" 
                    VerticalAlignment="Top" Margin="60,345,379,0"
                    Foreground="#FF5261BB" Grid.Row="1"/>
 
-        <Grid.Effect>
-            <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="3" />
-        </Grid.Effect>
-    </Grid>
+            <Grid.Effect>
+                <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="3" />
+            </Grid.Effect>
+        </Grid>
+    </materialDesign:TransitioningContent>
 </Window>
