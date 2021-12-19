@@ -23,6 +23,10 @@ namespace QuizProject1
         public MainWindow()
         {
             InitializeComponent();
+            borderRight1.Visibility = Visibility.Hidden;
+            borderRight2.Visibility = Visibility.Hidden;
+            borderRight3.Visibility = Visibility.Hidden;
+            
         }
 
         private void PackIcon_MouseEnter(object sender, MouseEventArgs e)
@@ -49,6 +53,10 @@ namespace QuizProject1
         {
         }
 
+        private void Slide(int index)
+        {
+
+        }
         private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index  = 0;
@@ -60,7 +68,11 @@ namespace QuizProject1
             }
             else if (index == 0)
             {
-                btn_teacher.Background = Brushes.Purple;
+                borderRight0.Visibility = Visibility.Visible;
+                borderRight1.Visibility = Visibility.Hidden;
+                borderRight2.Visibility = Visibility.Hidden;
+                borderRight3.Visibility = Visibility.Hidden;
+                
                 btn_student.Background = Brushes.Transparent;
                 btn_admin.Background = Brushes.Transparent;
                 btn_setting.Background = Brushes.Transparent;
@@ -70,26 +82,40 @@ namespace QuizProject1
             }
             else if(index == 1)
             {
+                borderRight1.Visibility = Visibility.Visible;
+                borderRight0.Visibility = Visibility.Hidden;
+                borderRight2.Visibility = Visibility.Hidden;
+                borderRight3.Visibility = Visibility.Hidden;
                 btn_teacher.Background = Brushes.Transparent;
-                btn_student.Background = Brushes.Purple;
+                
                 btn_admin.Background = Brushes.Transparent;
                 btn_setting.Background = Brushes.Transparent;
-                main_form.Children.Clear(); 
+                StudentAdminForm f = new StudentAdminForm();
+                main_form.Children.Clear();
+                main_form.Children.Add(f);
             }
             else if(index == 2)
             {
+                borderRight2.Visibility = Visibility.Visible;
+                borderRight1.Visibility = Visibility.Hidden;
+                borderRight0.Visibility = Visibility.Hidden;
+                borderRight3.Visibility = Visibility.Hidden;
                 btn_teacher.Background = Brushes.Transparent;
                 btn_student.Background = Brushes.Transparent;
-                btn_admin.Background = Brushes.Purple;
+                
                 btn_setting.Background = Brushes.Transparent;
                 main_form.Children.Clear();
             }
             else if(index == 3)
             {
+                borderRight3.Visibility = Visibility.Visible;
+                borderRight1.Visibility = Visibility.Hidden;
+                borderRight2.Visibility = Visibility.Hidden;
+                borderRight0.Visibility = Visibility.Hidden;
                 btn_teacher.Background = Brushes.Transparent;
                 btn_student.Background= Brushes.Transparent;   
                 btn_admin.Background= Brushes.Transparent;
-                btn_setting.Background = Brushes.Purple;
+               
                 main_form.Children.Clear();
             }
         }
