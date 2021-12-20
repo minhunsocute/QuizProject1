@@ -16,16 +16,19 @@
     <Grid
             HorizontalAlignment="Center"
             VerticalAlignment="Center" Height="782" Width="1224"
-            Background="#FFECDBDB">
+            Background="#FFF1E8E8">
         <Border CornerRadius="13"
-                Background="#FFECDBDB" Margin="-15,-10,-15,-10" 
+                Background="#FFF1E8E8" Margin="-15,-10,-15,-10" 
                 Grid.ColumnSpan="2"/>
-        <Grid Background="#FFECDBDB">
+        <Grid Background="#FFF1E8E8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
+            
+            
+            <!--Menu Grid-->
+            
             <Grid
               VerticalAlignment="Center"
               HorizontalAlignment="Center"
@@ -34,6 +37,8 @@
                 Background="White" Margin="-15,-10,-15,-10" 
                 Grid.ColumnSpan="2"/>
             </Grid>
+            
+            
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="780"/>
@@ -168,55 +173,15 @@
                         </Grid.Effect>
                     </Grid>
                 </Grid>
-                <Grid
+                
+                <!--Main Grid-->
+                <Grid x:Name="main_grid"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      Background="White" Height="762" Width="719">
-                    <Border CornerRadius="13"
-                            Background="White" Margin="-15,-10,-15,-10" 
-                            Grid.ColumnSpan="2"/>
-                    <Grid Margin="0,80,0,217"
-                          HorizontalAlignment="Center" Width="698">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="350*"/>
-                            <ColumnDefinition Width="349*"/>
-                        </Grid.ColumnDefinitions>
-                        <Border CornerRadius="13"
-                            Background="#FFEBECF3" Margin="-15,-10,-15,-10" 
-                            Grid.ColumnSpan="2"/>
-                        <materialDesign:Transitioner
-                                                     SelectedIndex="0" 
-                                                     AutoApplyTransitionOrigins="True"
-                                                     HorizontalAlignment="Left"
-                                                     VerticalAlignment="Center" Grid.ColumnSpan="2">
+                      Height="778" Width="750"
+                      Background="Transparent">
 
-                            <Grid>
-                                <local:Image_transition3/>
-                            </Grid>
-                            <materialDesign:TransitionerSlide>
-                                <materialDesign:TransitionerSlide.BackwardWipe>
-                                    <materialDesign:CircleWipe/>
-                                </materialDesign:TransitionerSlide.BackwardWipe>
-                                <materialDesign:TransitionerSlide.ForwardWipe>
-                                    <materialDesign:SlideWipe Direction="Right"/>
-                                </materialDesign:TransitionerSlide.ForwardWipe>
-                                <local:Image_transition1/>
-                            </materialDesign:TransitionerSlide>
-
-                            <materialDesign:TransitionerSlide>
-                                <materialDesign:TransitionerSlide.BackwardWipe>
-                                    <materialDesign:CircleWipe />
-                                </materialDesign:TransitionerSlide.BackwardWipe>
-                                <materialDesign:TransitionerSlide.ForwardWipe>
-                                    <materialDesign:SlideWipe Direction="Right" />
-                                </materialDesign:TransitionerSlide.ForwardWipe>
-                                <local:Image_transition2/>
-                            </materialDesign:TransitionerSlide>
-                        </materialDesign:Transitioner>
-                        <Grid.Effect>
-                            <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
-                        </Grid.Effect>
-                    </Grid>
+                    <local:introduce_form/>
                 </Grid>
             </Grid>
         </Grid>

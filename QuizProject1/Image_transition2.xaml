@@ -22,8 +22,7 @@
         <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
                 Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Grid.Row="2" Margin="30,34,0,0">
+                VerticalAlignment="Top" Margin="20,197,0,0">
             <materialDesign:PackIcon Kind="PageNext" Height="28" Width="28"/>
         </Button>
     </Grid>

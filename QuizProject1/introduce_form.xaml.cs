@@ -10,25 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace QuizProject1
 {
     /// <summary>
-    /// Interaction logic for mainStudentForm.xaml
+    /// Interaction logic for introduce_form.xaml
     /// </summary>
-    public partial class mainStudentForm : Window
+    public partial class introduce_form : UserControl
     {
-        public mainStudentForm()
+        public introduce_form()
         {
             InitializeComponent();
-            main_grid.Children.Clear();
-            main_grid.Children.Add(new introduce_form());
         }
 
-        private void btn_power_Click(object sender, RoutedEventArgs e)
+        private void Image_transition3_Loaded(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+
         }
     }
 }

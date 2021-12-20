@@ -22,15 +22,13 @@
         <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
                 Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Grid.Row="2" Margin="575,33,0,0" Background="#FF7E60C3">
+                VerticalAlignment="Top" Margin="633,180,0,0" Background="#FF7E60C3">
             <materialDesign:PackIcon Kind="PageNext" Height="28" Width="28"/>
         </Button>
         <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
                 Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Grid.Row="2" Margin="230,33,0,0">
+                VerticalAlignment="Top" Margin="10,180,0,0">
             <materialDesign:PackIcon Kind="PageNext" Height="28" Width="28"/>
         </Button>
     </Grid>
