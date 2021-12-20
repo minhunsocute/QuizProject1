@@ -25,20 +25,179 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            
+
+
             <!--Menu Grid-->
-            
-            <Grid
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center"
-              Background="White" Height="762" Width="130">
+
+            <Grid VerticalAlignment="Center"
+                  Background="White" Width="140" Height="762" Margin="10,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="600"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
                 <Border CornerRadius="13"
-                Background="White" Margin="-15,-10,-15,-10" 
-                Grid.ColumnSpan="2"/>
+                        Background="White" Margin="-15,-10,-15,-10"
+                        Grid.RowSpan="3"/>
+                <!--//Grid 1//-->
+                <Grid Grid.Row="0" Margin="10,10,10,10">
+                    <Border CornerRadius="13"
+                            Background="#FF5164D8" Margin="-15,-10,-15,-10"></Border>
+                    <Ellipse Margin="0,10,49,0">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Imag\1.png" Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <materialDesign:PackIcon Kind="Notebook" Foreground="White" 
+                                             Margin="57,46,0,0" Height="24" Width="30"/>
+                    <materialDesign:PackIcon Kind="Folder" Foreground="White" 
+                                             Margin="80,48,0,0" Height="24" Width="30"/>
+                </Grid>
+                <!--//Grid 2//-->
+                <Grid Grid.Row="1" Margin="0,22,0,10">
+                    <Border BorderThickness="2"
+                                CornerRadius="13" Background="White" Margin="20,0,30,483">
+                        <Image Name="imgPic1"
+                                   Height="56"
+                                   Stretch="Fill"
+                                   VerticalAlignment="Center" Margin="6,0,8,0" 
+                                   Source="Imag/gamer.png"/>
+                    </Border>
+                    <ListView x:Name="LV"
+                              Background="Transparent"
+                              BorderBrush="Transparent"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                              SelectedIndex="0" Margin="-10,68,-10,63">
+                        
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                            <Border x:Name="Bd"
+                                                    Height="50"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    Background="{TemplateBinding Background}"
+                                                    Padding="{TemplateBinding Padding}"
+                                                    SnapsToDevicePixels="True">
+
+                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                  VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                                            </Border>
+
+                                            <ControlTemplate.Triggers>
+                                                <MultiTrigger>
+                                                    <MultiTrigger.Conditions>
+                                                        <Condition Property="IsMouseOver" Value="True"/>
+                                                    </MultiTrigger.Conditions>
+
+                                                    <Setter Property="Background" 
+                                                            TargetName="Bd"
+                                                            Value="#FFFFE9E9"/>
+                                                </MultiTrigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <ListViewItem Height="60" Width="146" x:Name="btn_homePage">
+                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                                <materialDesign:PackIcon Kind="Home" Width="41" Height="34" 
+                                                         VerticalAlignment="Center" Margin="-4,0,0,0"
+                                                         Foreground="#FF5164D8"/>
+                                <TextBlock Text="Home page" FontSize="18" 
+                                           Margin="37,20,5,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
+                                           Height="25"/>
+
+                            </Grid>
+                        </ListViewItem>
+
+                        <ListViewItem Height="60" Width="146" x:Name="btn_exam">
+                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                                <materialDesign:PackIcon Kind="Computer" Width="41" Height="34" 
+                                                         VerticalAlignment="Center" Margin="-3,0,0,0"
+                                                         Foreground="#FF5164D8"/>
+                                <TextBlock Text="Exam online" FontSize="18" 
+                                           Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
+                                           Height="25"/>
+
+                            </Grid>
+                        </ListViewItem>
+
+                        <ListViewItem Height="60" Width="146" x:Name="btn_in4">
+                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                                <materialDesign:PackIcon Kind="Information" Width="41" Height="34" 
+                                                         VerticalAlignment="Center" Margin="-3,0,0,0"
+                                                         Foreground="#FF5164D8"/>
+                                <TextBlock Text="Information" FontSize="18" 
+                                           Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
+                                           Height="25"/>
+
+                            </Grid>
+                        </ListViewItem>
+
+                        <ListViewItem Height="60" Width="146" x:Name="btn_pe">
+                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                                <materialDesign:PackIcon Kind="Folder" Width="41" Height="34" 
+                                                         VerticalAlignment="Center" Margin="-3,0,0,0"
+                                                         Foreground="#FF5164D8"/>
+                                <TextBlock Text="Prac Exam" FontSize="18" 
+                                           Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
+                                           Height="25"/>
+
+                            </Grid>
+                        </ListViewItem>
+
+                        <ListViewItem Height="60" Width="146" x:Name="btn_cmt">
+                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                                <materialDesign:PackIcon Kind="Comment" Width="41" Height="34" 
+                                                         VerticalAlignment="Center" Margin="-3,0,0,0"
+                                                         Foreground="#FF5164D8"/>
+                                <TextBlock Text="Comment" FontSize="18" 
+                                           Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
+                                           Height="25"/>
+
+                            </Grid>
+                        </ListViewItem>
+
+                        <ListViewItem Height="60" Width="146" x:Name="btn_setting">
+                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                                <materialDesign:PackIcon Kind="Settings" Width="41" Height="34" 
+                                                         VerticalAlignment="Center" Margin="-3,0,0,0"
+                                                         Foreground="#FF5164D8"/>
+                                <TextBlock Text="Setting" FontSize="18" 
+                                           Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
+                                           Height="25"/>
+
+                            </Grid>
+                        </ListViewItem>
+                        
+                    </ListView>
+                </Grid>
+                <!--//Grid 3//-->
+                <Grid Grid.Row="2" Margin="10,22,10,10">
+                    <Border CornerRadius="13"
+                            Background="Transparent" Margin="-15,-10,-15,-10"></Border>
+                    <materialDesign:PackIcon Kind="Youtube" VerticalAlignment="Center"
+                                             Height="52" Width="40" Foreground="Red"
+                                             BorderBrush="Black"/>
+                    <TextBlock Grid.Row="0" Margin="40,18,6,3"
+                                   FontSize="12" Foreground="Black"
+                                   FontFamily="Arial Rounded MT Bold">
+                        HHProject
+                    </TextBlock>
+                </Grid>
+
+                <Grid.Effect>
+                    <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
+                </Grid.Effect>
             </Grid>
-            
-            
+
+
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="780"/>
@@ -173,7 +332,7 @@
                         </Grid.Effect>
                     </Grid>
                 </Grid>
-                
+
                 <!--Main Grid-->
                 <Grid x:Name="main_grid"
                       VerticalAlignment="Center"

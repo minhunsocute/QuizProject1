@@ -299,11 +299,11 @@
                         </ToggleButton>
                     </Grid>
                     <ListView x:Name="LV"
-                              Background="Transparent"
-                              BorderBrush="Transparent"
-                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="280" 
-                              SelectionChanged="LV_SelectionChanged"
-                              SelectedIndex="0">
+                                  Background="Transparent"
+                                  BorderBrush="Transparent"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="280" 
+                                  SelectionChanged="LV_SelectionChanged"
+                                  SelectedIndex="0">
 
                         <ListView.ItemContainerStyle>
                             <Style TargetType="{x:Type ListViewItem}">
@@ -311,16 +311,16 @@
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type ListViewItem}">
                                             <Border x:Name="Bd"
-                                                    Height="50"
-                                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                                    Background="{TemplateBinding Background}"
-                                                    Padding="{TemplateBinding Padding}"
-                                                    SnapsToDevicePixels="True">
+                                                        Height="50"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                                        Background="{TemplateBinding Background}"
+                                                        Padding="{TemplateBinding Padding}"
+                                                        SnapsToDevicePixels="True">
 
                                                 <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                                                  VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                                                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                                      VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
                                             </Border>
 
                                             <ControlTemplate.Triggers>
@@ -330,8 +330,8 @@
                                                     </MultiTrigger.Conditions>
 
                                                     <Setter Property="Background" 
-                                                            TargetName="Bd"
-                                                            Value="#FF6E7BC5"/>
+                                                                TargetName="Bd"
+                                                                Value="#FF6E7BC5"/>
                                                 </MultiTrigger>
                                             </ControlTemplate.Triggers>
                                         </ControlTemplate>
@@ -343,77 +343,77 @@
                         <ListViewItem Height="60" Width="172" x:Name="btn_teacher">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="171" Margin="-3,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Teacher" Width="38" Height="40" 
-                                                         VerticalAlignment="Center" Margin="11"
-                                                         Foreground="White"/>
+                                                             VerticalAlignment="Center" Margin="11"
+                                                             Foreground="White"/>
                                 <TextBlock Text="Teacher" FontSize="22" VerticalAlignment="Center" 
-                                           Margin="4 0" Foreground="White"/>
+                                               Margin="4 0" Foreground="White"/>
                                 <Grid x:Name="borderRight0"
-                                      Background="#F0D171"
-                                      HorizontalAlignment="Right"
-                                      Width="4"
-                                      Height="48" Margin="23,0,0,7"
-                                      >
+                                          Background="#F0D171"
+                                          HorizontalAlignment="Right"
+                                          Width="4"
+                                          Height="48" Margin="23,0,0,7"
+                                          >
                                 </Grid>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="60" Width="172" x:Name="btn_student">
                             <StackPanel Orientation="Horizontal" Margin="0,0,-10,0">
                                 <materialDesign:PackIcon Kind="School" Width="38" Height="36" 
-                                                         VerticalAlignment="Center" Margin="5"
-                                                         Foreground="White"/>
+                                                             VerticalAlignment="Center" Margin="5"
+                                                             Foreground="White"/>
                                 <TextBlock Text="Student" FontSize="22" VerticalAlignment="Center" 
-                                           Margin="10 0" Foreground="White"/>
+                                               Margin="10 0" Foreground="White"/>
                                 <Grid x:Name="borderRight1"
-                                      Background="#F0D171"
-                                      HorizontalAlignment="Right"
-                                      Width="4"
-                                      Height="65" Margin="23,0,0,0"
-                                      >
+                                          Background="#F0D171"
+                                          HorizontalAlignment="Right"
+                                          Width="4"
+                                          Height="65" Margin="23,0,0,0"
+                                          >
                                 </Grid>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="50" Width="172" x:Name="btn_admin">
                             <StackPanel Orientation="Horizontal" Margin="0,0,-10,0">
                                 <materialDesign:PackIcon Kind="Account" Width="38" Height="36" 
-                                                         VerticalAlignment="Center" Margin="5"
-                                                         Foreground="White"/>
+                                                             VerticalAlignment="Center" Margin="5"
+                                                             Foreground="White"/>
                                 <TextBlock Text="Admin" FontSize="22" VerticalAlignment="Center" 
-                                           Margin="10 0" Foreground="White"/>
+                                               Margin="10 0" Foreground="White"/>
                                 <Grid x:Name="borderRight2"
-                                      x:Uid=""
-                                      Background="#F0D171"
-                                      HorizontalAlignment="Right"
-                                      Width="4"
-                                      Height="48" Margin="34,0,0,-2"
-                                      >
+                                          x:Uid=""
+                                          Background="#F0D171"
+                                          HorizontalAlignment="Right"
+                                          Width="4"
+                                          Height="48" Margin="34,0,0,-2"
+                                          >
                                 </Grid>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="50" Width="172" x:Name="btn_setting">
                             <StackPanel Orientation="Horizontal" Margin="0,0,-10,0">
                                 <materialDesign:PackIcon Kind="Settings" Width="38" Height="36"
-                                                         VerticalAlignment="Center" Margin="5"
-                                                         Foreground="White"/>
+                                                             VerticalAlignment="Center" Margin="5"
+                                                             Foreground="White"/>
                                 <TextBlock Text="Setting" FontSize="22" VerticalAlignment="Center"
-                                           Margin="9 0" Foreground="White"/>
+                                               Margin="9 0" Foreground="White"/>
                                 <Grid x:Name="borderRight3"
-                                      x:Uid=""
-                                      Background="#F0D171"
-                                      HorizontalAlignment="Right"
-                                      Width="4"
-                                      Height="48" Margin="31,0,0,0"
-                                      >
+                                          x:Uid=""
+                                          Background="#F0D171"
+                                          HorizontalAlignment="Right"
+                                          Width="4"
+                                          Height="48" Margin="31,0,0,0"
+                                          >
                                 </Grid>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="60">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Shutdown" Width="38" Height="36" 
-                                                         VerticalAlignment="Center" Margin="11"
-                                                         Foreground="White"/>
+                                                             VerticalAlignment="Center" Margin="11"
+                                                             Foreground="White"/>
                                 <TextBlock Text="ShutDown" FontSize="22" VerticalAlignment="Center" 
-                                           Margin="4 0" Foreground="White"/>
-                                
+                                               Margin="4 0" Foreground="White"/>
+
                             </StackPanel>
                         </ListViewItem>
 

@@ -89,7 +89,7 @@
                     <Grid Grid.Column="0"
                           VerticalAlignment="Center" Height="166" Margin="10,0,22,0">
                         <Border CornerRadius="13"
-                        Background="#FF596AD4" Margin="-15,-12,-10,-12"/>
+                        Background="#FF596AD4" Margin="-14,-12,-10,-12"/>
                         <Border BorderThickness="2"
                                 CornerRadius="13" Background="White" Margin="0,0,90,83">
                             <Image Name="imgPic1"
