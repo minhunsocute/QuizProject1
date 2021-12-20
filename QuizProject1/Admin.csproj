@@ -253,6 +253,15 @@
   <ItemGroup>
     <Resource Include="Imag\HHProject %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\programing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\gamer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\coding.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
