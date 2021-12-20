@@ -41,10 +41,6 @@ namespace QuizProject1
             this.Visibility = Visibility.Collapsed;
         }
 
-        
-        
-       
-
         private void tg_btn_Checked(object sender, RoutedEventArgs e)
         {
         }

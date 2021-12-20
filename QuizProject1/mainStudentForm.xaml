@@ -40,6 +40,15 @@
                         Background="White" Margin="-15,-10,-15,-10"
                         Grid.RowSpan="3"/>
                 <!--//Grid 1//-->
+                <!--Main Grid-->
+                <Grid
+                      x:Name="main_grid"
+                      
+                      Height="778" Width="750"
+                      Background="Transparent" Margin="162,0,-772,-16" Grid.RowSpan="3">
+
+                    <local:introduce_form/>
+                </Grid>
                 <Grid Grid.Row="0" Margin="10,10,10,10">
                     <Border CornerRadius="13"
                             Background="#FF5164D8" Margin="-15,-10,-15,-10"></Border>
@@ -67,8 +76,8 @@
                               Background="Transparent"
                               BorderBrush="Transparent"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
-                              SelectedIndex="0" Margin="-10,68,-10,63">
-                        
+                              SelectedIndex="0" Margin="-10,68,-10,63" SelectionChanged="LV_SelectionChanged">
+
                         <ListView.ItemContainerStyle>
                             <Style TargetType="{x:Type ListViewItem}">
                                 <Setter Property="Template">
@@ -108,10 +117,10 @@
                             <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Home" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-4,0,0,0"
-                                                         Foreground="#FF5164D8"/>
+                                                         Foreground="#FF5164D8" x:Name="icon_homePage"/>
                                 <TextBlock Text="Home page" FontSize="18" 
                                            Margin="37,20,5,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
-                                           Height="25"/>
+                                           Height="25" x:Name="text_homePage"/>
 
                             </Grid>
                         </ListViewItem>
@@ -120,10 +129,10 @@
                             <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Computer" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-3,0,0,0"
-                                                         Foreground="#FF5164D8"/>
+                                                         Foreground="#FF5164D8" x:Name="icon_exam"/>
                                 <TextBlock Text="Exam online" FontSize="18" 
                                            Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
-                                           Height="25"/>
+                                           Height="25" x:Name="text_exam"/>
 
                             </Grid>
                         </ListViewItem>
@@ -132,10 +141,10 @@
                             <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Information" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-3,0,0,0"
-                                                         Foreground="#FF5164D8"/>
+                                                         Foreground="#FF5164D8" x:Name="icon_in4"/>
                                 <TextBlock Text="Information" FontSize="18" 
                                            Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
-                                           Height="25"/>
+                                           Height="25" x:Name="text_in4"/>
 
                             </Grid>
                         </ListViewItem>
@@ -144,10 +153,10 @@
                             <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Folder" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-3,0,0,0"
-                                                         Foreground="#FF5164D8"/>
+                                                         Foreground="#FF5164D8" x:Name="icon_pe"/>
                                 <TextBlock Text="Prac Exam" FontSize="18" 
                                            Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
-                                           Height="25"/>
+                                           Height="25" x:Name="text_pe"/>
 
                             </Grid>
                         </ListViewItem>
@@ -156,10 +165,10 @@
                             <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Comment" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-3,0,0,0"
-                                                         Foreground="#FF5164D8"/>
+                                                         Foreground="#FF5164D8" x:Name="icon_cmt"/>
                                 <TextBlock Text="Comment" FontSize="18" 
                                            Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
-                                           Height="25"/>
+                                           Height="25" x:Name="text_cmt"/>
 
                             </Grid>
                         </ListViewItem>
@@ -168,14 +177,14 @@
                             <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Settings" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-3,0,0,0"
-                                                         Foreground="#FF5164D8"/>
+                                                         Foreground="#FF5164D8" x:Name="icon_setting"/>
                                 <TextBlock Text="Setting" FontSize="18" 
                                            Margin="37,20,2,10" Foreground="#FF5164D8" FontFamily="Arial Rounded MT Bold" 
-                                           Height="25"/>
+                                           Height="25" x:Name="text_setting"/>
 
                             </Grid>
                         </ListViewItem>
-                        
+
                     </ListView>
                 </Grid>
                 <!--//Grid 3//-->
@@ -331,17 +340,10 @@
                             <DropShadowEffect Color="Black" Direction="200" ShadowDepth="1" />
                         </Grid.Effect>
                     </Grid>
+
                 </Grid>
 
-                <!--Main Grid-->
-                <Grid x:Name="main_grid"
-                      VerticalAlignment="Center"
-                      HorizontalAlignment="Center"
-                      Height="778" Width="750"
-                      Background="Transparent">
 
-                    <local:introduce_form/>
-                </Grid>
             </Grid>
         </Grid>
     </Grid>
