@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:QuizProject1"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
-             mc:Ignorable="d" 
-             d:DesignHeight="570" d:DesignWidth="670">
+             mc:Ignorable="d" d:DesignWidth="670" Height="594">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -31,7 +30,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid Background="#FFECDBDB">
+    <Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="159"/>
             <RowDefinition Height="*"/>
@@ -137,7 +136,7 @@
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide1" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
             <Grid Margin="10,155,10,-406" Grid.Row="1">
                 <DataGrid x:Name ="dataStudent" InkCanvas.Left="32" 
-                          InkCanvas.Top="145" BorderBrush="#FF6286A9" Foreground="White"
+                          InkCanvas.Top="145" BorderBrush="#FF6286A9" Foreground="White" Margin="0,0,0,-15"
                           >
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader }">

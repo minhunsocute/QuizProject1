@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="QuizProject1.introduce_formAdmin"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:QuizProject1" 
+             xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
+             mc:Ignorable="d"
+             Height="604" Width="670" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <materialDesignConverters:BooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter" TrueValue="Collapsed" FalseValue="Visible" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn, Duration=0:0:0.8}">
+
+        <Grid Width="670" Background="Transparent" 
+          Margin="0,10,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" 
+              Margin="25,10,25,20">
+                <Border CornerRadius="13"
+                    Background="White" Margin="-15,-10,-15,-10" 
+                    Grid.ColumnSpan="2"/>
+                <Image Source="Imag/minhhung201102.png"
+                   Stretch="Fill"/>
+                <Grid.Effect>
+                    <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
+                </Grid.Effect>
+            </Grid>
+            <Grid Grid.Row="1" 
+              Margin="25,10,25,19">
+                <Border CornerRadius="13"
+                    Background="White" 
+                    Margin="-16,-10,-14,-10"/>
+                <Image Source="Imag/quochung.png" Margin="-4,0,233,0"/>
+                <Grid Margin="425,10,10,10">
+                    <Border CornerRadius="13"
+                        Background="#FF5261BB" 
+                        Margin="-16,-10,-14,-10"/>
+                    <Ellipse Margin="19,5,123,152">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Imag/mylogo.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <TextBlock  Margin="62,26,33,151"
+                            FontSize="14" Foreground="Black" 
+                            FontFamily="Arial Rounded MT Bold">
+                        HHProject
+                    </TextBlock>
+                    <StackPanel Margin="10,48,10,125" Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Folder" Foreground="White" 
+                                             Height="20" Width="19"/>
+                        <TextBlock Grid.Row="0" Margin="2 1"
+                               FontSize="11" Foreground="White"
+                               FontFamily="Arial Rounded MT Bold" 
+                               Height="14"><Run Text="archiving exam questions"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10,68,26,105" Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="FilePdfBox" Foreground="White" Height="20" Width="19"/>
+                        <TextBlock Grid.Row="0" Margin="2 1"
+                               FontSize="11" Foreground="White"
+                               FontFamily="Arial Rounded MT Bold" 
+                               Height="14"><Run Text="do mock exam"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10,89,26,85" Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Pen" Foreground="White" Height="20" Width="19"/>
+                        <TextBlock Grid.Row="0" Margin="2 1"
+                               FontSize="11" Foreground="White"
+                               FontFamily="Arial Rounded MT Bold" 
+                               Height="14"><Run Text="exam, test online"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10,108,13,64" Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Account" Foreground="White" Height="20" Width="19"/>
+                        <TextBlock Grid.Row="0" Margin="2 1"
+                               FontSize="11" Foreground="White"
+                               FontFamily="Arial Rounded MT Bold" 
+                               Height="14"><Run Text="Monitor your own learning"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10,129,26,42" Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.623"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0.114"/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <materialDesign:PackIcon Kind="EventText" Foreground="White" Height="20" Width="19"/>
+                        <TextBlock Grid.Row="0" Margin="2 1"
+                                   FontSize="11" Foreground="White"
+                                   FontFamily="Arial Rounded MT Bold" Height="14"><Run Text="study for test"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10,152,12,22" Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Comment" Foreground="White" Height="20" Width="19"/>
+                        <TextBlock Grid.Row="0" Margin="2 1"
+                                   FontSize="11" Foreground="White"
+                                   FontFamily="Arial Rounded MT Bold" Height="14"><Run Text="give feedback to teachers"/></TextBlock>
+                    </StackPanel>
+                    <materialDesign:PackIcon Kind="Like" Foreground="#FF5261BB" Height="31" Width="40" Margin="169,144,0,0"/>
+
+
+                </Grid>
+                <Grid.Effect>
+                    <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
+                </Grid.Effect>
+            </Grid>
+        </Grid>
+    </materialDesign:TransitioningContent>
+</UserControl>
+

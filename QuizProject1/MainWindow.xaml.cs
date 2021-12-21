@@ -23,9 +23,7 @@ namespace QuizProject1
         public MainWindow()
         {
             InitializeComponent();
-            borderRight1.Visibility = Visibility.Hidden;
-            borderRight2.Visibility = Visibility.Hidden;
-            borderRight3.Visibility = Visibility.Hidden;
+           
             
         }
 
@@ -53,6 +51,71 @@ namespace QuizProject1
         {
 
         }
+        
+        #region listView_item
+        private void checkListView_teacher(int i)
+        {
+            if(i == 0){
+                icon_teacher.Foreground = Brushes.White;
+                text_teacher.Foreground = Brushes.White;
+            }
+            else
+            {
+                icon_teacher.Foreground = Brushes.Aqua;
+                text_teacher.Foreground = Brushes.Aqua;
+            }
+        }
+        private void checkListView_student(int i)
+        {
+            if(i == 0){
+                icon_student.Foreground = Brushes.White;
+                text_student.Foreground = Brushes.White;
+            }
+            else
+            {
+                icon_student.Foreground = Brushes.Aqua;
+                text_student.Foreground = Brushes.Aqua;
+            }
+        }
+        private void checkListView_admin(int i)
+        {
+            if(i == 0){
+                icon_admin.Foreground = Brushes.White;
+                text_admin.Foreground = Brushes.White;
+            }
+            else
+            {
+                icon_admin.Foreground = Brushes.Aqua;
+                text_admin.Foreground = Brushes.Aqua;
+            }
+        }
+        private void checkListView_setting(int i)
+        {
+            if(i == 0){
+                icon_setting.Foreground = Brushes.White;
+                text_setting.Foreground = Brushes.White;
+            }
+            else
+            {
+                icon_setting.Foreground = Brushes.Aqua;
+                text_setting.Foreground = Brushes.Aqua;
+            }
+        }
+        private void checkListView_homePage(int i)
+        {
+            if (i == 0)
+            {
+                icon_home.Foreground = Brushes.White;
+                text_home.Foreground = Brushes.White;
+            }
+            else
+            {
+                icon_home.Foreground = Brushes.Aqua;
+                text_home.Foreground = Brushes.Aqua;
+            }
+        }
+        #endregion
+
         private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index  = 0;
@@ -64,56 +127,57 @@ namespace QuizProject1
             }
             else if (index == 0)
             {
-                borderRight0.Visibility = Visibility.Visible;
-                borderRight1.Visibility = Visibility.Hidden;
-                borderRight2.Visibility = Visibility.Hidden;
-                borderRight3.Visibility = Visibility.Hidden;
-                
-                btn_student.Background = Brushes.Transparent;
-                btn_admin.Background = Brushes.Transparent;
-                btn_setting.Background = Brushes.Transparent;
-                teacher_adminForm f = new teacher_adminForm();
+                checkListView_homePage(1);
+                checkListView_teacher(0);
+                checkListView_student(0);
+                checkListView_admin(0);
+                checkListView_setting(0);
+                introduce_formAdmin f = new introduce_formAdmin();
                 main_form.Children.Clear();
                 main_form.Children.Add(f);
             }
             else if(index == 1)
             {
-                borderRight1.Visibility = Visibility.Visible;
-                borderRight0.Visibility = Visibility.Hidden;
-                borderRight2.Visibility = Visibility.Hidden;
-                borderRight3.Visibility = Visibility.Hidden;
-                btn_teacher.Background = Brushes.Transparent;
-                
-                btn_admin.Background = Brushes.Transparent;
-                btn_setting.Background = Brushes.Transparent;
-                StudentAdminForm f = new StudentAdminForm();
+                checkListView_homePage(0);
+                checkListView_teacher(1);
+                checkListView_student(0);
+                checkListView_admin(0);
+                checkListView_setting(0);
+                teacher_adminForm f = new teacher_adminForm();
                 main_form.Children.Clear();
                 main_form.Children.Add(f);
+               
             }
             else if(index == 2)
             {
-                borderRight2.Visibility = Visibility.Visible;
-                borderRight1.Visibility = Visibility.Hidden;
-                borderRight0.Visibility = Visibility.Hidden;
-                borderRight3.Visibility = Visibility.Hidden;
-                btn_teacher.Background = Brushes.Transparent;
-                btn_student.Background = Brushes.Transparent;
+                checkListView_homePage(0);
+                checkListView_teacher(0);
+                checkListView_student(1);
+                checkListView_admin(0);
+                checkListView_setting(0);
+                StudentAdminForm f = new StudentAdminForm();
+                main_form.Children.Clear();
+                main_form.Children.Add(f);
                 
-                btn_setting.Background = Brushes.Transparent;
+            }
+            else if(index == 3)
+            {
+                checkListView_homePage(0);
+                checkListView_teacher(0);
+                checkListView_student(0);
+                checkListView_admin(1);
+                checkListView_setting(0);
                 main_form.Children.Clear();
                 mainStudentForm f = new mainStudentForm();
                 f.ShowDialog();
             }
-            else if(index == 3)
+            else if (index == 4)
             {
-                borderRight3.Visibility = Visibility.Visible;
-                borderRight1.Visibility = Visibility.Hidden;
-                borderRight2.Visibility = Visibility.Hidden;
-                borderRight0.Visibility = Visibility.Hidden;
-                btn_teacher.Background = Brushes.Transparent;
-                btn_student.Background= Brushes.Transparent;   
-                btn_admin.Background= Brushes.Transparent;
-               
+                checkListView_homePage(0);
+                checkListView_teacher(0);
+                checkListView_student(0);
+                checkListView_admin(0);
+                checkListView_setting(1);
                 main_form.Children.Clear();
             }
         }

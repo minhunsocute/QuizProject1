@@ -91,6 +91,9 @@
     <Compile Include="introduce_form.xaml.cs">
       <DependentUpon>introduce_form.xaml</DependentUpon>
     </Compile>
+    <Compile Include="introduce_formAdmin.xaml.cs">
+      <DependentUpon>introduce_formAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -142,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="introduce_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="introduce_formAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imag\coding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\minhhung201102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\quochung.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />

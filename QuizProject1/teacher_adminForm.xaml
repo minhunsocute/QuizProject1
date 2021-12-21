@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:materialDesignConverters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
              mc:Ignorable="d"
-             Height="570" Width="670"
+             Height="604" Width="670"
              >
     <UserControl.Resources>
         <ResourceDictionary>
@@ -31,7 +31,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid Height="570" Width="670" Background="#FFECDBDB" >
+    <Grid Width="670" Background="Transparent" Margin="0,10,0,0" >
         <Grid.RowDefinitions>
             <RowDefinition Height="159"/>
             <RowDefinition Height="*"/>
@@ -39,7 +39,7 @@
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
             <Grid Margin="10,155,10,-406" Grid.Row="1">
                 <DataGrid x:Name ="dataTeacher" InkCanvas.Left="32" 
-                          InkCanvas.Top="145" BorderBrush="#FF6286A9" Foreground="White"
+                          InkCanvas.Top="145" BorderBrush="#FF6286A9" Foreground="White" Margin="0,0,0,-20"
                           >
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader }">
