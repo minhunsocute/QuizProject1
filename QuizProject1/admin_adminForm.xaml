@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="QuizProject1.teacher_adminForm"
+﻿<UserControl x:Class="QuizProject1.admin_adminForm"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -81,7 +81,15 @@
                                 </Style>
                             </DataGridTextColumn.HeaderStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Professional Knowledgen">
+                        <DataGridTextColumn Header="Sex">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    <Setter Property="Background" Value="#FF5974E4"/>
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Email">
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -96,38 +104,17 @@
         </materialDesign:TransitioningContent>
         <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.8}">
             <Grid Grid.Row="0" Margin="0,2,0,-2">
-                <Button x:Name="btn_Insert"
-                        Style="{StaticResource MaterialDesignRaisedLightButton}"
-                        materialDesign:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
-                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                        Margin="505,92,20,35"
-                        Background="#FF18ABC7" Click="btn_Insert_Click">
-                    <TextBlock Text="Insert Teacher" Foreground="White" />
-                </Button>
+
                 <Button x:Name="btn_find"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         materialDesign:ButtonAssist.CornerRadius="5"
                         ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                        Margin="335,93,190,34"
-                        Background="#FF5261BB" Click="btn_find_Click_1">
-                    <TextBlock Text="Find Teacher" Foreground="White" />
+                        Margin="175,99,386,28"
+                        Background="#FF5261BB" >
+                    <TextBlock Text="Find Admin" Foreground="White" />
                 </Button>
-                <ComboBox
-                        x:Name="Pk_text"
-                        Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                        materialDesign:TextFieldAssist.HasClearButton="True"
-                        materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
-                        materialDesign:ColorZoneAssist.Mode="SecondaryLight"
-                        materialDesign:HintAssist.Hint="Knowledge"
-                        MinWidth="128" Margin="46,87,489,36"
-                        Foreground="#FF5261BB">
-                    <ComboBoxItem Content="Android" />
-                    <ComboBoxItem Content="iOS" />
-                    <ComboBoxItem Content="Linux" />
-                    <ComboBoxItem Content="Windows" />
-                </ComboBox>
+
                 <Button  
                         HorizontalAlignment="Left" Margin="9,92,0,0" 
                         VerticalAlignment="Top" Height="35" Width="30"
@@ -139,16 +126,17 @@
                          x:Name="searchText"
                          materialDesign:HintAssist.Hint="Search here"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                         VerticalAlignment="Top" Margin="193,86,355,0" 
+                         VerticalAlignment="Top" Margin="47,93,501,0" 
                          Foreground="#FF5261BB"/>
                 <Button  
                         HorizontalAlignment="Left" Margin="9,10,0,0" 
                         VerticalAlignment="Top" Height="72" Width="76"
                         Background="Transparent"
                         Padding="0">
-                    <materialDesign:PackIcon Kind="Teacher" Width="66" Height="50" Foreground="#FF5261BB"/>
+                    <materialDesign:PackIcon Kind="Account" Width="66" 
+                                             Height="50" Foreground="#FF5261BB"/>
                 </Button>
-                <Label Content="Teacher" 
+                <Label Content="Admin" 
                        Margin="90,37,410,76" 
                        FontSize="40" 
                        Foreground="#FF5261BB"

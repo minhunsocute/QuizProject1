@@ -148,24 +148,24 @@
                         <ComboBoxItem Content="A11"/>
                     </ComboBox>
                     <Button Content="Save" Margin="49,274,118,-26"
-                    Background="#FF5261BB" x:Name="btn_save" Click="btn_save_Click"/>
+                            Background="#FF5261BB" x:Name="btn_save" Click="btn_save_Click"/>
                     <Button Content="Next" Margin="143,274,22,-26"
-                        x:Name="btn_next" Click="btn_next_Click"/>
+                            x:Name="btn_next" Click="btn_next_Click"/>
                     <Grid.Effect>
                         <DropShadowEffect Color="#FF7E6FB3" Direction="200" 
-                                      ShadowDepth="3" />
+                                          ShadowDepth="3" />
                     </Grid.Effect>
                 </Grid>
-
             </Grid>
-            <Ellipse Margin="15,338,465,18" Grid.Row="1">
+            <Ellipse Margin="15,338,465,18" 
+                     Grid.Row="1">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="Imag\mylogo.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <TextBlock Text="HHProject" FontSize="15" 
-                   VerticalAlignment="Top" Margin="60,345,379,0"
-                   Foreground="#FF5261BB" Grid.Row="1"/>
+                       VerticalAlignment="Top" Margin="60,345,379,0"
+                       Foreground="#FF5261BB" Grid.Row="1"/>
 
             <Grid.Effect>
                 <DropShadowEffect Color="#FF5261BB" Direction="200" ShadowDepth="3" />

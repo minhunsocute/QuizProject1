@@ -100,22 +100,22 @@
             <Grid Grid.Row="1">
                 <Grid Margin="16,322,10,13">
                     <Border CornerRadius="10"
-                        Background="#FF5261BB" Grid.RowSpan="2"/>
+                            Background="#FF5261BB" Grid.RowSpan="2"/>
                     <Image HorizontalAlignment="Left" Height="135" 
-                   Margin="32,0,0,0" VerticalAlignment="Center" Width="126"
-                   Source="Imag\mylogo.png"/>
+                           Margin="32,0,0,0" VerticalAlignment="Center" Width="126"
+                           Source="Imag\mylogo.png"/>
                     <Button HorizontalAlignment="Left" 
-                    Margin="186,103,0,0" VerticalAlignment="Top"
-                    Background="#FF2196F3">
+                            Margin="186,103,0,0" VerticalAlignment="Top"
+                            Background="#FF2196F3">
                         <materialDesign:PackIcon Kind="Camera" HorizontalAlignment="Center" 
                                          VerticalAlignment="Center" Width="25" Height="25"/>
 
                     </Button>
                     <Button HorizontalAlignment="Left" x:Name="button_Insert"
-                    Margin="249,103,0,0" VerticalAlignment="Top"
-                    Background="#FF13DCDC" Click="button_Insert_Click">
+                            Margin="249,103,0,0" VerticalAlignment="Top"
+                            Background="#FF13DCDC" Click="button_Insert_Click">
                         <materialDesign:PackIcon Kind="UserAdd" HorizontalAlignment="Center" 
-                                         VerticalAlignment="Center" Width="25" Height="25"/>
+                                                 VerticalAlignment="Center" Width="25" Height="25"/>
 
                     </Button>
                 </Grid>

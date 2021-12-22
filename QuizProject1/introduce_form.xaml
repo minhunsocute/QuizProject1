@@ -11,28 +11,28 @@
     <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn, Duration=0:0:0.8}">
 
         <Grid Width="732"
-          Height="788"
-          VerticalAlignment="Center"
-          HorizontalAlignment="Center">
+              Height="788"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="170*"/>
                 <RowDefinition Height="27*"/>
             </Grid.RowDefinitions>
 
             <Grid Margin="0,19,0,266"
-                          HorizontalAlignment="Center" Width="690">
+                  HorizontalAlignment="Center" Width="690">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="350*"/>
                     <ColumnDefinition Width="349*"/>
                 </Grid.ColumnDefinitions>
-                <Border CornerRadius="13"
+                <Border     CornerRadius="13"
                             Background="#FFEBECF3" Margin="-15,-12,-15,-8" 
                             Grid.ColumnSpan="2"/>
                 <materialDesign:Transitioner
-                SelectedIndex="0" 
-                AutoApplyTransitionOrigins="True"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" Grid.ColumnSpan="2">
+                            SelectedIndex="0" 
+                            AutoApplyTransitionOrigins="True"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" Grid.ColumnSpan="2">
 
                     <Grid>
                         <local:Image_transition3 Loaded="Image_transition3_Loaded"/>
@@ -58,27 +58,36 @@
                     </materialDesign:TransitionerSlide>
                 </materialDesign:Transitioner>
                 <Grid.Effect>
-                    <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
+                    <DropShadowEffect Color="Black" Direction="200" 
+                                      ShadowDepth="0" />
                 </Grid.Effect>
             </Grid>
-            <Grid Margin="21,460,296,23" Grid.RowSpan="2">
+            <Grid Margin="21,460,296,23" 
+                  Grid.RowSpan="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Border CornerRadius="13"
-                        Background="#FF5261BB" Margin="-13,-12,-17,-12" Grid.RowSpan="2">
+                        Background="#FF5261BB" 
+                        Margin="-13,-12,-17,-12" 
+                        Grid.RowSpan="2">
                 </Border>
-                <Grid Grid.Row="0" Margin="10,10,10,10">
+                <Grid Grid.Row="0" 
+                      Margin="10,10,10,10">
                     <Border CornerRadius="13"
-                        Background="#FF596AD4" Margin="-16,-12,-14,-12" Grid.RowSpan="2"/>
+                            Background="#FF596AD4" 
+                            Margin="-16,-12,-14,-12" 
+                            Grid.RowSpan="2"/>
                     <Ellipse Margin="15,5,304,5">
                         <Ellipse.Fill>
                             <ImageBrush ImageSource="Imag/mylogo.png"/>
                         </Ellipse.Fill>
                     </Ellipse>
-                    <TextBlock  Text="Team Code" Margin="96,35,128,12"
-                                FontSize="30" Foreground="White" FontFamily="Arial Rounded MT Bold"/>
+                    <TextBlock  Text="Team Code" 
+                                Margin="96,35,128,12"
+                                FontSize="30" Foreground="White" 
+                                FontFamily="Arial Rounded MT Bold"/>
 
                 </Grid>
                 <Grid Grid.Row="1">
@@ -87,11 +96,15 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0"
-                          VerticalAlignment="Center" Height="166" Margin="10,0,22,0">
+                          VerticalAlignment="Center" 
+                          Height="166" Margin="10,0,22,0">
                         <Border CornerRadius="13"
-                        Background="#FF596AD4" Margin="-14,-12,-10,-12"/>
+                                Background="#FF596AD4" 
+                                Margin="-14,-12,-10,-12"/>
                         <Border BorderThickness="2"
-                                CornerRadius="13" Background="White" Margin="0,0,90,83">
+                                CornerRadius="13" 
+                                Background="White" 
+                                Margin="0,0,90,83">
                             <Image Name="imgPic1"
                                    Height="56"
                                    Stretch="Fill"
@@ -108,32 +121,32 @@
                         <StackPanel Margin="10,88,26,60" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Facebook" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             Minh Hưng
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Margin="10,106,26,42" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Instagram" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             minhhung2011202
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Margin="10,123,26,25" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Github" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             minhunsocute
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Margin="10,140,26,8" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Twitter" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             minhhung2011
                             </TextBlock>
                         </StackPanel>
@@ -141,7 +154,8 @@
                     <Grid Grid.Column="1"
                           VerticalAlignment="Center" Height="166" Margin="22,0,10,0">
                         <Border CornerRadius="13"
-                        Background="#FF596AD4" Margin="-15,-12,-12,-12"/>
+                                Background="#FF596AD4" 
+                                Margin="-15,-12,-12,-12"/>
                         <Border BorderThickness="2"
                                 CornerRadius="13" Background="White" Margin="0,0,90,83">
                             <Image Name="imgPic2"
@@ -160,32 +174,32 @@
                         <StackPanel Margin="10,88,26,60" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Facebook" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             Quốc Hưng
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Margin="10,106,26,42" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Instagram" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             hungmai2411
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Margin="10,123,26,25" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Github" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             hungmai2411
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Margin="10,140,26,8" Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Twitter" Foreground="Black"/>
                             <TextBlock Grid.Row="0" Margin="5 0"
-                                   FontSize="11" Foreground="White"
-                                   FontFamily="Arial Rounded MT Bold" Height="12">
+                                       FontSize="11" Foreground="White"
+                                       FontFamily="Arial Rounded MT Bold" Height="12">
                             teoem241102
                             </TextBlock>
                         </StackPanel>
@@ -205,7 +219,9 @@
                         Margin="-17,-12,-13,-12"/>
                 <Grid Grid.Row="0" Margin="10,15,10,15">
                     <Border CornerRadius="13"
-                        Background="#FFE4E4E4" Margin="-16,-12,-14,-12" Grid.RowSpan="2"/>
+                            Background="#FFE4E4E4" 
+                            Margin="-16,-12,-14,-12" 
+                            Grid.RowSpan="2"/>
                     <Ellipse Margin="2,5,143,5">
                         <Ellipse.Fill>
                             <ImageBrush ImageSource="Imag/mylogo.png"/>

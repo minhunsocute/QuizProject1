@@ -1,0 +1,207 @@
+﻿<UserControl x:Class="QuizProject1.setting_adminForm"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:QuizProject1" 
+             xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d"
+             Height="604" Width="670"
+             Background="Transparent">
+    <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn, Duration=0:0:0.8}">
+
+        <Grid >
+            <Label Content="Setting" 
+               Margin="113,25,332,519" 
+               FontSize="40" 
+               Foreground="#FF5261BB"
+               FontFamily="Arial Rounded MT Bold"/>
+            <Button  
+                        HorizontalAlignment="Left" Margin="25,10,0,0" 
+                        VerticalAlignment="Top" Height="72" Width="76"
+                        Background="Transparent"
+                        Padding="0">
+                <materialDesign:PackIcon Kind="Settings" Width="66" 
+                                     Height="50" Foreground="#FF5261BB"/>
+            </Button>
+
+            <Grid Grid.Row="0" 
+              Margin="35,114,335,24">
+                <Border CornerRadius="13"
+                    Background="White" Margin="-15,-10,-15,-10" 
+                    Grid.ColumnSpan="2"/>
+                <Image HorizontalAlignment="Left" Height="84" 
+                   Margin="200,11,0,0" VerticalAlignment="Top" Width="90"
+                   Source="Imag\mylogo.png"
+                   Stretch="Fill"/>
+                <Button 
+                    x:Name="btn_changeImage" 
+                    Margin="222,76,32,358"
+                    Background="#FF5261BB"
+                    BorderBrush="{x:Null}">
+                    <materialDesign:PackIcon Kind="Camera" HorizontalAlignment="Center"
+                                         Width="15" Height="15"/>
+                </Button>
+                <TextBlock Grid.Row="0" Margin="38,46,137,371"
+                       FontSize="20" Foreground="Black"
+                       FontFamily="Arial Rounded MT Bold">
+                Personal <LineBreak/>
+                Information
+                </TextBlock>
+                <TextBox
+                        x:Name="ID"
+                        Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                        VerticalAlignment="Top"
+                        Height="50"
+                        AcceptsReturn="True"
+                        TextWrapping="Wrap"
+                        VerticalScrollBarVisibility="Auto"
+                        materialDesign:HintAssist.Hint="ID Teacher"
+                        IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
+                        Margin="49,125,21,0" Text="20120491" 
+                        RenderTransformOrigin="0.5,0.5">
+                </TextBox>
+                <TextBox
+                            x:Name="nameAdmin"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            VerticalAlignment="Top"
+                            Height="50"
+                            AcceptsReturn="True"
+                            TextWrapping="Wrap"
+                            VerticalScrollBarVisibility="Auto"
+                            materialDesign:HintAssist.Hint="Name Teacher"
+                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
+                            Margin="48,183,22,0" Text="Nguyễn Minh Hưng" />
+                <TextBox
+                            x:Name="Sex"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            VerticalAlignment="Top"
+                            Height="50"
+                            AcceptsReturn="True"
+                            TextWrapping="Wrap"
+                            VerticalScrollBarVisibility="Auto"
+                            materialDesign:HintAssist.Hint="Sex"
+                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
+                            Margin="48,303,22,0" Text="Boy" />
+                <TextBox
+                            x:Name="Email"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            VerticalAlignment="Top"
+                            Height="50"
+                            AcceptsReturn="True"
+                            TextWrapping="Wrap"
+                            VerticalScrollBarVisibility="Auto"
+                            materialDesign:HintAssist.Hint="Email"
+                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" 
+                            Margin="48,371,22,0" Text="hungnguyen.201102ak@gmail.com" />
+                <Button Content="Save" 
+                    x:Name="btn_changeIn4" 
+                    Margin="197,428,22,6"
+                    Background="#FF5261BB"
+                    BorderBrush="{x:Null}"/>
+                <DatePicker
+                            x:Name="Date_born"
+                            materialDesign:HintAssist.Hint="Date Born"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="49,242,22,0" 
+                            VerticalAlignment="Top" Height="50" />
+                <materialDesign:PackIcon Kind="IdCardOutline" 
+                                     Width="34" 
+                                     Height="36"
+                                     Foreground="#FF5261BB" Margin="10,134,0,0" />
+                <materialDesign:PackIcon Kind="User" 
+                                     Width="34" 
+                                     Height="36"
+                                     Foreground="#FF5261BB" Margin="9,189,0,0" />
+                <materialDesign:PackIcon Kind="DateRange" 
+                                     Width="34" 
+                                     Height="36"
+                                     Foreground="#FF5261BB" Margin="10,249,0,0" />
+                <materialDesign:PackIcon Kind="AccountMultiple" 
+                                     Width="34" 
+                                     Height="36"
+                                     Foreground="#FF5261BB" Margin="8,310,0,0" />
+                <materialDesign:PackIcon Kind="Email" 
+                                     Width="34" 
+                                     Height="36"
+                                     Foreground="#FF5261BB" Margin="8,378,0,0" RenderTransformOrigin="6.912,-16.028" />
+
+                <Grid.Effect>
+                    <DropShadowEffect Color="Black" Direction="200" 
+                                  ShadowDepth="0" />
+                </Grid.Effect>
+            </Grid>
+            <Grid Grid.Row="0" 
+              Margin="385,260,30,24">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border CornerRadius="13"
+                    Background="White" Margin="-15,-10,-15,-10" 
+                    Grid.ColumnSpan="2">
+
+
+                </Border>
+                <PasswordBox
+                        x:Name="text_Oldpass"
+                        materialDesign:HintAssist.Hint="Old Password"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:HintAssist.HelperText="At least 8 characters" 
+                        Margin="35,64,20,0"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                        Height="41" FontSize="15" 
+                        VerticalAlignment="Top" Foreground="Black" Grid.ColumnSpan="2"/>
+                <PasswordBox
+                        x:Name="text_pass"
+                        materialDesign:HintAssist.Hint="Password"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:HintAssist.HelperText="At least 8 characters" 
+                        Margin="35,122,20,0"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                        Height="42" FontSize="15" 
+                        VerticalAlignment="Top" Foreground="Black" Grid.ColumnSpan="2"/>
+                <PasswordBox
+                        x:Name="text_Repass"
+                        materialDesign:HintAssist.Hint="Re Password"
+                        materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:HintAssist.HelperText="At least 8 characters" 
+                        Margin="35,190,20,0"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                        Height="42" FontSize="15" 
+                        VerticalAlignment="Top" Foreground="Black" Grid.ColumnSpan="2"/>
+                <materialDesign:PackIcon Kind="PasswordAdd" 
+                                     Width="20" 
+                                     Height="21"
+                                     Foreground="#FF5261BB" Margin="7,143,0,0" />
+                <materialDesign:PackIcon Kind="PasswordAdd" 
+                                     Width="20" 
+                                     Height="21"
+                                     Foreground="#FF5261BB" Margin="7,211,0,0" />
+                <materialDesign:PackIcon Kind="Password" 
+                                     Width="20" 
+                                     Height="21"
+                                     Foreground="#FF5261BB" Margin="7,84,0,0" />
+                <Button Content="Save" 
+                    x:Name="btn_changePass" 
+                    Margin="18,272,19,16" 
+                    Grid.Column="1"
+                    Background="#FF5261BB"
+                    BorderBrush="{x:Null}"/>
+                <TextBlock Grid.Row="0" Margin="10,25,68,270"
+                       FontSize="20" Foreground="Black"
+                       FontFamily="Arial Rounded MT Bold" Grid.ColumnSpan="2"><Run 
+                       Text="Change Password"/></TextBlock>
+                <materialDesign:PackIcon Kind="AccountEdit" 
+                                     Width="42" 
+                                     Height="41"
+                                     Foreground="#FF5261BB"
+                                     Margin="64,10,0,0" Grid.Column="1" />
+
+                <Grid.Effect>
+                    <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
+                </Grid.Effect>
+            </Grid>
+        </Grid>
+    </materialDesign:TransitioningContent>
+</UserControl>

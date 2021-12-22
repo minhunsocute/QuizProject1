@@ -121,7 +121,7 @@ namespace QuizProject1
             int index  = 0;
             index = LV.SelectedIndex;
             MoveCursorMenu(index);
-            if (index == 4)
+            if (index == 5)
             {
                 System.Windows.Application.Current.Shutdown();
             }
@@ -168,8 +168,8 @@ namespace QuizProject1
                 checkListView_admin(1);
                 checkListView_setting(0);
                 main_form.Children.Clear();
-                mainStudentForm f = new mainStudentForm();
-                f.ShowDialog();
+                admin_adminForm f = new admin_adminForm();
+                main_form.Children.Add(f);
             }
             else if (index == 4)
             {
@@ -179,6 +179,8 @@ namespace QuizProject1
                 checkListView_admin(0);
                 checkListView_setting(1);
                 main_form.Children.Clear();
+                setting_adminForm f = new  setting_adminForm();
+                main_form.Children.Add(f);
             }
         }
         private void MoveCursorMenu(int index)

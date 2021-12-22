@@ -53,11 +53,12 @@
                                          Margin = "3,9,5,0" />
                 </Border>
 
-                <TextBlock Text = "Student"
-                               FontSize = "25"
+                <TextBlock     Text = "Student"
+                               FontSize = "40"
                                Foreground = "#FF5261BB"
-                               Margin = "100 52 0 0"
-                               VerticalAlignment = "Top"/>
+                               Margin = "100,32,395,0"
+                               VerticalAlignment = "Top"
+                               FontFamily="Arial Rounded MT Bold"/>
 
                 <Button Height="36"
                         Width="36"

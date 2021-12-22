@@ -31,10 +31,20 @@ namespace QuizProject1
 
         private void btn_signIn_Click(object sender, RoutedEventArgs e)
         {
-            var mainWindow = new MainWindow();
-            this.Hide();
-            mainWindow.ShowDialog();
-            this.Show();
+            if (text_userName.Text == "1")
+            {
+                var mainWindow = new MainWindow();
+                this.Hide();
+                mainWindow.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                var mainStudent = new mainStudentForm();
+                this.Hide();
+                mainStudent.ShowDialog();
+                this.Show();
+            }
         }
             
         private void btn_power_Click(object sender, RoutedEventArgs e)
