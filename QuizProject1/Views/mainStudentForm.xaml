@@ -47,14 +47,13 @@
                       Height="778" Width="750"
                       Background="Transparent" Margin="162,0,-772,-16" Grid.RowSpan="3">
 
-                    <local:introduce_form/>
                 </Grid>
                 <Grid Grid.Row="0" Margin="10,10,10,10">
                     <Border CornerRadius="13"
                             Background="#FF5164D8" Margin="-15,-10,-15,-10"></Border>
                     <Ellipse Margin="0,10,49,0">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="Imag\1.png" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="/QuizProject1;component/Imag/1.png" Stretch="UniformToFill"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <materialDesign:PackIcon Kind="Notebook" Foreground="White" 
@@ -70,7 +69,7 @@
                                    Height="56"
                                    Stretch="Fill"
                                    VerticalAlignment="Center" Margin="6,0,8,0" 
-                                   Source="Imag/gamer.png"/>
+                                   Source="/QuizProject1;component/Imag/gamer.png"/>
                     </Border>
                     <ListView x:Name="LV"
                               Background="Transparent"
@@ -254,7 +253,7 @@
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Image Stretch="Fill"
-                                   Source="Imag/exampic.jpg" Opacity="0.7" Margin="0,0,0,256" Grid.RowSpan="2"/>
+                                   Source="/QuizProject1;component/Imag/exampic.jpg" Opacity="0.7" Margin="0,0,0,256" Grid.RowSpan="2"/>
                                 <Button
                                         Grid.Row="1"
                                         Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
@@ -323,7 +322,7 @@
                         <StackPanel Orientation="Horizontal" Margin="0,0,94,0">
                             <Ellipse Width="60">
                                 <Ellipse.Fill>
-                                    <ImageBrush ImageSource="Imag\mylogo.png"/>
+                                    <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"/>
                                 </Ellipse.Fill>
                             </Ellipse>
                             <TextBlock Text="HHProject" 

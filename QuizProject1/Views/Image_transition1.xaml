@@ -16,7 +16,7 @@
             <materialDesign:ColorZone Mode="Custom"  VerticalAlignment="Stretch" 
                                   HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch"
                                   Background="#FF5261BB">
-                <Image Source="Imag/HHProject.png" Stretch="Fill" Margin="0,0,0,-150"/>
+                <Image Source="/QuizProject1;component/Imag/HHProject.png" Stretch="Fill" Margin="0,0,0,-150"/>
             </materialDesign:ColorZone>
         </Grid>
         <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"

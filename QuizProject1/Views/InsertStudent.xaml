@@ -141,7 +141,7 @@
                                Margin="32,0,0,0" 
                                VerticalAlignment="Center" 
                                Width="126"
-                               Source="Imag\mylogo.png"/>
+                               Source="/QuizProject1;component/Imag/mylogo.png"/>
                         <Button HorizontalAlignment="Left" 
                                 Margin="186,103,0,0" 
                                 VerticalAlignment="Top"

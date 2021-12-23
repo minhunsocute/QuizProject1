@@ -35,7 +35,7 @@
                    VerticalAlignment="Top"
                    Width="191" 
                    Opacity="0.7"
-                   Source="Imag\1.png"
+                   Source="/QuizProject1;component/Imag/1.png"
                    Stretch="Fill" 
                    Grid.Row="1"/>
             <Button HorizontalAlignment="Left" 
@@ -160,7 +160,7 @@
             <Ellipse Margin="15,338,465,18" 
                      Grid.Row="1">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="Imag\mylogo.png"/>
+                    <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <TextBlock Text="HHProject" FontSize="15" 

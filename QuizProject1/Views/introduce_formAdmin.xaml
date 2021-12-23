@@ -44,7 +44,7 @@
                 <Border CornerRadius="13"
                     Background="White" Margin="-15,-10,-15,-10" 
                     Grid.ColumnSpan="2"/>
-                <Image Source="Imag/minhhung201102.png"
+                <Image Source="/QuizProject1;component/Imag/minhhung201102.png"
                    Stretch="Fill"/>
                 <Grid.Effect>
                     <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0" />
@@ -55,14 +55,14 @@
                 <Border CornerRadius="13"
                     Background="White" 
                     Margin="-16,-10,-14,-10"/>
-                <Image Source="Imag/quochung.png" Margin="-4,0,233,0"/>
+                <Image Source="/QuizProject1;component/Imag/quochung.png" Margin="-4,0,233,0"/>
                 <Grid Margin="425,10,10,10">
                     <Border CornerRadius="13"
                         Background="#FF5261BB" 
                         Margin="-16,-10,-14,-10"/>
                     <Ellipse Margin="19,5,123,152">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="Imag/mylogo.png"/>
+                            <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock  Margin="62,26,33,151"

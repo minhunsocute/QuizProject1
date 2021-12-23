@@ -39,7 +39,7 @@
         </Border>
 
         <Image  Grid.Row="0" Stretch="Fill"
-                Source="Imag\exampic.jpg"
+                Source="/QuizProject1;component/Imag/exampic.jpg"
                 Opacity="0.6"/>
         <Button x:Name="btn_power"
                 materialDesign:ButtonAssist.CornerRadius="5"
@@ -64,7 +64,7 @@
 
             </Border>
 
-            <Image     Source="Imag\1.png" Margin="0,11,0,0"
+            <Image     Source="/QuizProject1;component/Imag/1.png" Margin="0,11,0,0"
                        VerticalAlignment="Top" Height="93"
                        HorizontalAlignment="Center" Width="96"/>
             <TextBlock Text="Quizz App"

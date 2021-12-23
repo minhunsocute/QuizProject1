@@ -33,7 +33,7 @@
                     Grid.ColumnSpan="2"/>
                 <Image HorizontalAlignment="Left" Height="84" 
                    Margin="200,11,0,0" VerticalAlignment="Top" Width="90"
-                   Source="Imag\mylogo.png"
+                   Source="/QuizProject1;component/Imag/mylogo.png"
                    Stretch="Fill"/>
                 <Button 
                     x:Name="btn_changeImage" 

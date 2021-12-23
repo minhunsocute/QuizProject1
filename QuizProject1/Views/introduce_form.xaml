@@ -81,7 +81,7 @@
                             Grid.RowSpan="2"/>
                     <Ellipse Margin="15,5,304,5">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="Imag/mylogo.png"/>
+                            <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock  Text="Team Code" 
@@ -109,7 +109,7 @@
                                    Height="56"
                                    Stretch="Fill"
                                    VerticalAlignment="Center" Margin="6,0,8,0" 
-                                   Source="Imag/programing.png"/>
+                                   Source="/QuizProject1;component/Imag/programing.png"/>
                         </Border>
                         <TextBlock Grid.Row="0" Margin="90,17,10,99"
                                    FontSize="14" Foreground="White"
@@ -162,7 +162,7 @@
                                    Height="56"
                                    Stretch="Fill"
                                    VerticalAlignment="Center" Margin="8,0,10,0" 
-                                   Source="Imag/coding.png"/>
+                                   Source="/QuizProject1;component/Imag/coding.png"/>
                         </Border>
                         <TextBlock Grid.Row="0" Margin="90,17,10,99"
                                    FontSize="14" Foreground="White"
@@ -224,7 +224,7 @@
                             Grid.RowSpan="2"/>
                     <Ellipse Margin="2,5,143,5">
                         <Ellipse.Fill>
-                            <ImageBrush ImageSource="Imag/mylogo.png"/>
+                            <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"/>
                         </Ellipse.Fill>
                     </Ellipse>
                     <TextBlock  Margin="72,30,2,8"

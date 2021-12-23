@@ -22,7 +22,7 @@ namespace QuizProject1
         public mainStudentForm()
         {
             InitializeComponent();
-            
+            main_grid.Children.Add(new introduce_form());
         }
 
         private void btn_power_Click(object sender, RoutedEventArgs e)

@@ -52,7 +52,7 @@
         <!--//Toggle Button style templete//-->
 
         <ImageBrush x:Key="tb_mouse_over"
-                    ImageSource="Imag\menu1.png"/>
+                    ImageSource="/QuizProject1;component/Imag/menu1.png"/>
         <Style x:Key="tb_style" 
                TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
@@ -82,13 +82,13 @@
         </Style>
         <!--//Style Button1//-->
         <ImageBrush x:Key="tb_Teacher_over"
-                    ImageSource="Imag\teacherOver.png"/>
+                    ImageSource="/QuizProject1;component/Imag/teacherOver.png"/>
         <ImageBrush x:Key="tb_Student_over"
-                    ImageSource="Imag\student.png"/>
+                    ImageSource="/QuizProject1;component/Imag/student.png"/>
         <ImageBrush x:Key="tb_admin_over"
-                    ImageSource="Imag\administrator (1).png"/>
+                    ImageSource="/QuizProject1;component/Imag/administrator (1).png"/>
         <ImageBrush x:Key="tb_shutdown_over"
-                    ImageSource="Imag\power.png"/>
+                    ImageSource="/QuizProject1;component/Imag/power.png"/>
         <Style x:Key="btn_style" TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -257,7 +257,6 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1" x:Name="main_form" Background="Transparent" 
                   Margin="0,10,0,0">
-                <local:introduce_formAdmin/>
             </Grid>
             <Grid x:Name="nav_lb"
                   HorizontalAlignment="Left"
@@ -273,7 +272,7 @@
                     <Grid>
                         <Ellipse Width ="50" Stroke="White" Margin="14,5,76,0" >
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="Imag\mylogo.png"
+                                <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"
                                     Stretch="Fill"/>
                             </Ellipse.Fill>
 
@@ -301,7 +300,7 @@
                                       Style="{StaticResource tb_style}" 
                                       Checked="tg_btn_Checked" Unchecked="tg_btn_Unchecked">
                             <ToggleButton.Background>
-                                <ImageBrush ImageSource="Imag\menu.png"/>
+                                <ImageBrush ImageSource="/QuizProject1;component/Imag/menu.png"/>
                             </ToggleButton.Background>
 
                         </ToggleButton>
@@ -459,7 +458,7 @@
               HorizontalAlignment="Right" Width="215">
             <Border CornerRadius="13"
                         Background="#FF5261BB" Margin="-15,-30,-15,-10"/>
-            <Image Source="Imag\exam.jpg"
+            <Image Source="/QuizProject1;component/Imag/exam.jpg"
                    Stretch="Fill" Height="154" 
                    VerticalAlignment="Top"
                    Opacity="0.8"/>
@@ -468,7 +467,7 @@
                      Margin="0,110,0,0" VerticalAlignment="Top"
                      HorizontalAlignment="Center" Stroke="White">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="Imag\mylogo.png"
+                    <ImageBrush ImageSource="/QuizProject1;component/Imag/mylogo.png"
                                 Stretch="Fill"/>
                 </Ellipse.Fill>
                 <Ellipse.BitmapEffect>
@@ -508,7 +507,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Grid.Column="0"  
-                       Source="Imag\shutterstock_1664708983.jpg"
+                       Source="/QuizProject1;component/Imag/shutterstock_1664708983.jpg"
                        >
                     <Image.Effect>
                         <DropShadowEffect Color="Black" Direction="200" 
@@ -517,7 +516,7 @@
                 </Image>
 
                 <Image Grid.Row="1" Grid.Column="1"  
-                       Source="Imag\exampic.jpg" Margin="4,0,0,0"
+                       Source="/QuizProject1;component/Imag/exampic.jpg" Margin="4,0,0,0"
                        >
                     <Image.Effect>
                         <DropShadowEffect Color="Black" Direction="200" 

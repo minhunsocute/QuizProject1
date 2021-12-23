@@ -23,7 +23,7 @@ namespace QuizProject1
         public MainWindow()
         {
             InitializeComponent();
-           
+            main_form.Children.Add(new introduce_formAdmin());
             
         }
 
