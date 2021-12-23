@@ -67,6 +67,10 @@
     <Compile Include="admin_adminForm.xaml.cs">
       <DependentUpon>admin_adminForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\student_mainForm\CustomControl\customListExam.xaml.cs">
+      <DependentUpon>customListExam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\student_mainForm\CustomControl\MyFilesViewModel.cs" />
     <Compile Include="Views\admin_mainForm\EditViewStudent.xaml.cs">
       <DependentUpon>EditViewStudent.xaml</DependentUpon>
     </Compile>
@@ -75,6 +79,12 @@
     </Compile>
     <Compile Include="Views\Error_form.xaml.cs">
       <DependentUpon>Error_form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\student_mainForm\comment_form.xaml.cs">
+      <DependentUpon>comment_form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\student_mainForm\examOnline_form.xaml.cs">
+      <DependentUpon>examOnline_form.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\student_mainForm\Image_transition\Image_transition1.xaml.cs">
       <DependentUpon>Image_transition1.xaml</DependentUpon>
@@ -90,6 +100,9 @@
     </Compile>
     <Compile Include="Views\admin_mainForm\InsertTea.xaml.cs">
       <DependentUpon>InsertTea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\student_mainForm\Information_form.xaml.cs">
+      <DependentUpon>Information_form.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\student_mainForm\introduce_form.xaml.cs">
       <DependentUpon>introduce_form.xaml</DependentUpon>
@@ -112,6 +125,12 @@
     <Compile Include="Views\admin_mainForm\StudentAdminForm.xaml.cs">
       <DependentUpon>StudentAdminForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\student_mainForm\pracExam_form.xaml.cs">
+      <DependentUpon>pracExam_form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\student_mainForm\settingStudent_form.xaml.cs">
+      <DependentUpon>settingStudent_form.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Success_form.xaml.cs">
       <DependentUpon>Success_form.xaml</DependentUpon>
     </Compile>
@@ -119,6 +138,10 @@
       <DependentUpon>teacher_adminForm.xaml</DependentUpon>
     </Compile>
     <Page Include="admin_adminForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\CustomControl\customListExam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +154,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Error_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\comment_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\examOnline_form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\admin_mainForm\InsertTea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\Information_form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +226,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\admin_mainForm\StudentAdminForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\pracExam_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\settingStudent_form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
