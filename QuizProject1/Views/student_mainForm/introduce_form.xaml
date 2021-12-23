@@ -8,7 +8,7 @@
              xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d"
              Width="750" Height="778">
-    <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn, Duration=0:0:0.8}">
+    <!--<materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect Kind=ExpandIn, Duration=0:0:0.8}">-->
 
         <Grid Width="732"
               Height="788"
@@ -279,5 +279,5 @@
                 </Grid.Effect>
             </Grid>
         </Grid>
-    </materialDesign:TransitioningContent>
+    <!--</materialDesign:TransitioningContent>-->
 </UserControl>

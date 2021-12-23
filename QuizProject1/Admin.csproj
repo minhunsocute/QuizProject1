@@ -67,66 +67,66 @@
     <Compile Include="admin_adminForm.xaml.cs">
       <DependentUpon>admin_adminForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EditViewStudent.xaml.cs">
+    <Compile Include="Views\admin_mainForm\EditViewStudent.xaml.cs">
       <DependentUpon>EditViewStudent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EditViewTeacher.xaml.cs">
+    <Compile Include="Views\admin_mainForm\EditViewTeacher.xaml.cs">
       <DependentUpon>EditViewTeacher.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Error_form.xaml.cs">
       <DependentUpon>Error_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Image_transition1.xaml.cs">
+    <Compile Include="Views\student_mainForm\Image_transition\Image_transition1.xaml.cs">
       <DependentUpon>Image_transition1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Image_transition2.xaml.cs">
+    <Compile Include="Views\student_mainForm\Image_transition\Image_transition2.xaml.cs">
       <DependentUpon>Image_transition2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Image_transition3.xaml.cs">
+    <Compile Include="Views\student_mainForm\Image_transition\Image_transition3.xaml.cs">
       <DependentUpon>Image_transition3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\InsertStudent.xaml.cs">
+    <Compile Include="Views\admin_mainForm\InsertStudent.xaml.cs">
       <DependentUpon>InsertStudent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\InsertTea.xaml.cs">
+    <Compile Include="Views\admin_mainForm\InsertTea.xaml.cs">
       <DependentUpon>InsertTea.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\introduce_form.xaml.cs">
+    <Compile Include="Views\student_mainForm\introduce_form.xaml.cs">
       <DependentUpon>introduce_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\introduce_formAdmin.xaml.cs">
+    <Compile Include="Views\admin_mainForm\introduce_formAdmin.xaml.cs">
       <DependentUpon>introduce_formAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\mainStudentForm.xaml.cs">
+    <Compile Include="Views\student_mainForm\mainStudentForm.xaml.cs">
       <DependentUpon>mainStudentForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\setting_adminForm.xaml.cs">
+    <Compile Include="Views\admin_mainForm\setting_adminForm.xaml.cs">
       <DependentUpon>setting_adminForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StudentAdminForm.xaml.cs">
+    <Compile Include="Views\admin_mainForm\StudentAdminForm.xaml.cs">
       <DependentUpon>StudentAdminForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Success_form.xaml.cs">
       <DependentUpon>Success_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\teacher_adminForm.xaml.cs">
+    <Compile Include="Views\admin_mainForm\teacher_adminForm.xaml.cs">
       <DependentUpon>teacher_adminForm.xaml</DependentUpon>
     </Compile>
     <Page Include="admin_adminForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EditViewStudent.xaml">
+    <Page Include="Views\admin_mainForm\EditViewStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EditViewTeacher.xaml">
+    <Page Include="Views\admin_mainForm\EditViewTeacher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,31 +134,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Image_transition1.xaml">
+    <Page Include="Views\student_mainForm\Image_transition\Image_transition1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Image_transition2.xaml">
+    <Page Include="Views\student_mainForm\Image_transition\Image_transition2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Image_transition3.xaml">
+    <Page Include="Views\student_mainForm\Image_transition\Image_transition3.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\InsertStudent.xaml">
+    <Page Include="Views\admin_mainForm\InsertStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\InsertTea.xaml">
+    <Page Include="Views\admin_mainForm\InsertTea.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\introduce_form.xaml">
+    <Page Include="Views\student_mainForm\introduce_form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\introduce_formAdmin.xaml">
+    <Page Include="Views\admin_mainForm\introduce_formAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,11 +166,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\mainStudentForm.xaml">
+    <Page Include="Views\student_mainForm\mainStudentForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MainWindow.xaml">
+    <Page Include="Views\admin_mainForm\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -178,11 +178,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\MainWindow.xaml.cs">
+    <Compile Include="Views\admin_mainForm\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\setting_adminForm.xaml">
+    <Page Include="Views\admin_mainForm\setting_adminForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,7 +190,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\StudentAdminForm.xaml">
+    <Page Include="Views\admin_mainForm\StudentAdminForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,7 +198,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\teacher_adminForm.xaml">
+    <Page Include="Views\admin_mainForm\teacher_adminForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -292,6 +292,7 @@
   <ItemGroup>
     <Folder Include="ListModels\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\teacher_mainForm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
