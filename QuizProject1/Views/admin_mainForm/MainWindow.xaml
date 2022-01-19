@@ -246,7 +246,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Border CornerRadius="13"
-                Background="#FFF1E8E8" Margin="-15,-10,-15,-10" 
+                Background="#FFEFF2F6" Margin="-15,-10,-15,-10" 
                 Grid.ColumnSpan="2"/>
         <!--//Menu//-->
         <Grid  x:Name="man_Grid"

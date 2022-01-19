@@ -43,7 +43,7 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
-            <Image Margin="19,19,362,50" Source="Imag\browser.png">
+            <Image Margin="19,19,362,50" Source="/QuizProject1;component/Imag/browser.png">
             </Image>
             <TextBlock Text="Username or password is empty" Foreground="White"    
                        FontSize="20" Margin="101,41,5,68"

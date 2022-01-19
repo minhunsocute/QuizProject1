@@ -4,15 +4,102 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:QuizProject1.CustomControl" 
+             xmlns:local="clr-namespace:QuizProject1" 
              xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d"
              Width="750" Height="778">
 
+    <UserControl.Resources>
+        <DropShadowBitmapEffect x:Key="DropShadowListItem" Softness="2" ShadowDepth="1" Color="LightGray" Direction="260"/>
+        <Style x:Key="Aydoo"
+            TargetType="{x:Type ListBoxItem}" >
+            <Setter Property="BitmapEffect" Value="{StaticResource DropShadowListItem}"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="400"/>
+            <Setter Property="Template">    
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                            <Grid>
+                                <!--8 Columns-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="233"/>
+                                    <ColumnDefinition Width="170"/>
+                                    <ColumnDefinition Width="123"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" 
+                                       Source="/QuizProject1;component/Imag/file.png"
+                                       Width="30"/>
+
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="White"/>
+
+                                <!--optional trigger, :P-->
+                                <Setter Property="Width" Value="415"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid Width="732"
-              Height="788"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Center">
-        
-    </Grid> 
+          Height="788"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="40,67,46,228">
+            <Border CornerRadius="13"
+                    Background="#FFEFF2F6" Margin="-15,-10,-15,-10"
+                    Grid.RowSpan="3"/>
+            <!--<ListBox Name="listExam" 
+                 SelectionMode="Single" 
+                 Margin="7,60,0,75">
+                <ListBoxItem Style="{StaticResource Aydoo}">
+                    <Grid>
+
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem Style="{StaticResource Aydoo}">Item 2</ListBoxItem>
+                <ListBoxItem Style="{StaticResource Aydoo}">Item 3</ListBoxItem>
+                <ListBoxItem Style="{StaticResource Aydoo}">Item 4</ListBoxItem>
+                <ListBoxItem Style="{StaticResource Aydoo}">Item 5</ListBoxItem>
+                <ListBoxItem Style="{StaticResource Aydoo}">Item 6</ListBoxItem>
+                <ListBoxItem Style="{StaticResource Aydoo}">Item 7</ListBoxItem>
+
+            </ListBox>-->
+            <DataGrid   x:Name ="dataGrid" InkCanvas.Left="32" 
+                          InkCanvas.Top="145" BorderBrush="#FF6286A9" Foreground="White" Margin="0,0,0,10"
+                          >
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader }">
+                        <Setter Property="Background" Value="#FF5974E4"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Height" Value="40"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path='ID'}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Name Exam" Binding="{Binding Path='nameExam'}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding Path='time'}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Teacher" Binding="{Binding Path='teacher'}" IsReadOnly="True"/>
+            </DataGrid>
+            <Grid.Effect>
+                <DropShadowEffect Color="Black" Direction="200" ShadowDepth="0.1" />
+            </Grid.Effect>
+        </Grid>
+    </Grid>
 </UserControl>

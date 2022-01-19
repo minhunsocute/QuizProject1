@@ -67,10 +67,10 @@
     <Compile Include="admin_adminForm.xaml.cs">
       <DependentUpon>admin_adminForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\student_mainForm\CustomControl\customListExam.xaml.cs">
+    <Compile Include="CustomControl\customListExam.xaml.cs">
       <DependentUpon>customListExam.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\student_mainForm\CustomControl\MyFilesViewModel.cs" />
+    <Compile Include="CustomControl\MyFilesViewModel.cs" />
     <Compile Include="Views\admin_mainForm\EditViewStudent.xaml.cs">
       <DependentUpon>EditViewStudent.xaml</DependentUpon>
     </Compile>
@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="Views\student_mainForm\comment_form.xaml.cs">
       <DependentUpon>comment_form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\student_mainForm\customUsercontrol\customListBox.xaml.cs">
+      <DependentUpon>customListBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\student_mainForm\examOnline_form.xaml.cs">
       <DependentUpon>examOnline_form.xaml</DependentUpon>
@@ -141,7 +144,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\student_mainForm\CustomControl\customListExam.xaml">
+    <Page Include="CustomControl\customListExam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\student_mainForm\comment_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\student_mainForm\customUsercontrol\customListBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -335,7 +342,11 @@
   <ItemGroup>
     <Folder Include="ListModels\" />
     <Folder Include="Models\" />
+    <Folder Include="resources\" />
     <Folder Include="Views\teacher_mainForm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imag\file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />

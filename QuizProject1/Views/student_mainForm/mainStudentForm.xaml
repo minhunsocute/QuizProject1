@@ -16,11 +16,11 @@
     <Grid
             HorizontalAlignment="Center"
             VerticalAlignment="Center" Height="782" Width="1224"
-            Background="#FFF1E8E8">
+            Background="#FFEFF2F6">
         <Border CornerRadius="13"
-                Background="#FFF1E8E8" Margin="-15,-10,-15,-10" 
+                Background="#FFEFF2F6" Margin="-15,-10,-15,-10" 
                 Grid.ColumnSpan="2"/>
-        <Grid Background="#FFF1E8E8">
+        <Grid Background="#FFEFF2F6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
@@ -46,6 +46,7 @@
                       
                       Height="778" Width="750"
                       Background="Transparent" Margin="162,0,-772,-16" Grid.RowSpan="3">
+                    
 
                 </Grid>
                 <Grid Grid.Row="0" Margin="10,10,10,10">
@@ -173,7 +174,8 @@
                         </ListViewItem>
 
                         <ListViewItem Height="60" Width="146" x:Name="btn_setting">
-                            <Grid  HorizontalAlignment="Right" Width="146" Margin="0,0,-10,-9">
+                            <Grid  HorizontalAlignment="Right" 
+                                   Width="146" Margin="0,0,-10,-9">
                                 <materialDesign:PackIcon Kind="Settings" Width="41" Height="34" 
                                                          VerticalAlignment="Center" Margin="-3,0,0,0"
                                                          Foreground="#FF5164D8" x:Name="icon_setting"/>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuizProject1.Views.student_mainForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -152,6 +153,7 @@ namespace QuizProject1
                 change_ListViewCmt(1);
                 change_ListViewSetting(1);
                 main_grid.Children.Clear();
+                main_grid.Children.Add(new pracExam_form());
             }
             else if (index == 4)
             {

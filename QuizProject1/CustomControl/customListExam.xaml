@@ -4,18 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuizProject1.CustomControl"
-             mc:Ignorable="d" x:Name="this" HorizontalAlignment="Stretch">
+             mc:Ignorable="d" 
+             x:Name="this" 
+             HorizontalAlignment="Stretch">
     <!--New Files Listbox-->
     <UserControl.Resources>
-        <Style x:Key="LBText" TargetType="{x:Type TextBlock}">
-            <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style x:Key="LBText" 
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="VerticalAlignment" 
+                    Value="Center"/>
         </Style>
 
         <!--PathIcon-->
-        <Style x:Key="LBPath" TargetType="{x:Type Path}">
-            <Setter Property="Fill" Value="#C2C3C3"/>
-            <Setter Property="Stretch" Value="Uniform"/>
-            <Setter Property="Height" Value="25"/>
+        <Style x:Key="LBPath" 
+               TargetType="{x:Type Path}">
+            <Setter Property="Fill" 
+                    Value="#C2C3C3"/>
+            <Setter Property="Stretch" 
+                    Value="Uniform"/>
+            <Setter Property="Height" 
+                    Value="25"/>
         </Style>
 
         <DropShadowBitmapEffect x:Key="DropShadowListItem" Softness="2" ShadowDepth="1" Color="LightGray" Direction="260"/>
@@ -74,5 +82,8 @@
         </Style>
     </UserControl.Resources>
 
-    <ListBox Height="{Binding Height, ElementName=this}" Width="{Binding Width, ElementName=this}" ItemsSource="{Binding getFileDetails}" Background="Transparent" BorderThickness="0"/>
+    <ListBox Height="{Binding Height, ElementName=this}" 
+             Width="{Binding Width, ElementName=this}" 
+             ItemsSource="{Binding getFileDetails}" 
+             Background="Transparent" BorderThickness="0"/>
 </UserControl>
