@@ -34,7 +34,6 @@ namespace QuizProject1.Views.student_mainForm
             List<dataGriditems> items = new List<dataGriditems>();
 
             
-            dataGrid.Foreground = Brushes.Black;
         }
     }
 }

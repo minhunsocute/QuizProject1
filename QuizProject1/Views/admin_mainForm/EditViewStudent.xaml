@@ -25,7 +25,7 @@
             </Grid.RowDefinitions>
 
             <Border CornerRadius="10"
-                Background="#FFECDBDB" Margin="-15,-10,-15,-10" 
+                Background="#FFEFF2F6" Margin="-15,-10,-15,-10" 
                 Grid.RowSpan="2">
 
             </Border>

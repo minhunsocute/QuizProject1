@@ -24,7 +24,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Border CornerRadius="10"
-                Background="#FFECDBDB" Margin="-15,-10,-15,-10" 
+                Background="#FFEFF2F6" Margin="-15,-10,-15,-10" 
                 Grid.RowSpan="2"/>
             <Grid Grid.Row="0">
                 <Button HorizontalAlignment="Left" Height="27" Width="49"
