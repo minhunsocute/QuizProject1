@@ -56,7 +56,7 @@
           HorizontalAlignment="Center"
           Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/> 
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
